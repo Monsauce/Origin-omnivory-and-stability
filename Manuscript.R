@@ -1,8 +1,9 @@
 #R script to run analysis and generate figures for "Omnivory and stability in an experimental food web"
 library(RCurl)
+library(ggplot2)
 
 ####Snail analyses####
-#read in Snail data from GitHub
+#read in snail data from GitHub
 snail.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/Snail.csv")
 snail<-read.csv(text=snail.URL)
 
@@ -145,14 +146,98 @@ Figure.2<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic
   geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))+
   theme_minimal()
 
-#run two-way ANOVA and TukeyHSD to determine differences between species
+#run two-way ANOVA and TukeyHSD to determine differences between Species
 ANOVA1<-aov(LD75~Species*Trophic, data=LD75.model.output)
 TukeyHSD(ANOVA1)
 
 
-  
-  
-  
-  
-  
-  
+####Algae analyses####  
+
+#read in algae data from GitHub
+algae.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/Algae.csv")
+algae<-read.csv(text=algae.URL)
+
+#pull out only crayfish treatments and order factors
+algae.subset<-algae[algae$Species%in%c("Limosus", "Propinquus","Rusticus ","Virilis "),]
+algae.subset$Species<- factor(algae.subset$Species, levels=c("Limosus","Rusticus ", "Propinquus", "Virilis "))
+
+#reduce spatial heterogenity and take rolling mean across 3 days 
+algae.subset.roll<-ddply(.data=algae.subset, .variables=.(Trophic, Species, Replicate), .fun= transform, Mean = rollmean(Density, 3, fill=NA, align="center"))
+algae.subset.roll<-algae.subset.roll[algae.subset.roll$Day%in%c("3","9","15","19","21","27","33","39","45","51","57"),]
+
+#pool data across Replicates 
+algae.subset.roll.mean<-ddply(.data=algae.subset.roll, .variables=.(Trophic, Species, Day), .fun= summarise, Mean = mean(mean))
+
+library(mgcv)
+mod.1<-gam(Mean~s(Day)+s(Day, by=Guild)+Guild+Trophic*Origin, data=algae.subset.roll)#used this model 
+
+mod.2<-gam(Mean~s(Day)+Guild+Trophic*Origin, data=algae.subset.roll) 
+
+#compare with ANOVA if interaction is significant keep it 
+anova(mod.1, mod.2, test='Chisq')
+
+#inspect mod.1 results
+summary(mod.1)
+
+#plot Figure 3
+library(gamm4)
+mod.3<-gamm4(Mean~s(Day, by=Guild)+Trophic*Origin, data=algae.subset.roll)
+vis.gam(mod.3$gam, view=c("Day", "Guild", "Trophic"), color = "bw", theta=35, ticktype='detailed')
+
+
+####Stable isotope analyses####
+#read in stable isotope data from GitHub
+SIA.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/SIA.csv")
+SIA<-read.csv(text=SIA.URL)
+
+#pull out only crayfish treatments and order factors
+SIA$Species<- factor(SIA$Species, levels=c(" Limosus","Rusticus", "Propinquus", "Virilis"))
+
+#pool across Replicate and calulate Mean, SD
+SIA.mean<-ddply(.data=SIA, .variables=.(Species,Trophic), .fun= summarise, MeanC = mean(d15C), MeanN=mean(d15N))
+SIA.SD<-ddply(.data=SIA, .variables=.(Species, Trophic), .fun= summarise, SDC = sd(d15C), SDN = sd(d15N))
+SIA.DF<-merge(SIA.mean,SIA.SD)
+
+#plot Figure 4
+Figure.4<-ggplot(SIA.DF, aes(x =MeanC, y = MeanN, colour=Trophic))+geom_point(aes(shape = Species, size=3))+
+  geom_errorbar(aes(ymin=MeanN-SDN, ymax=MeanN+SDN))+
+  geom_errorbarh(aes(xmax = MeanC + SDC, xmin = MeanC - SDC))+
+  theme_minimal()+
+  scale_colour_manual(values = c("black", "grey"))+
+  scale_shape_manual(values=c(0,15,2,17))+
+  ylab(expression(paste(Delta, "N")))+
+  xlab(expression(paste(Delta, "C")))
+
+#run two-way ANOVA and TukeyHSD to determine differences between Species 
+ANOVA3<- aov(d15C ~ Origin*Trophic, data=SIA)
+TukeyHSD(ANOVA3)
+
+ANOVA4<- aov(d15N ~ Origin*Trophic, data=SIA)
+summary(ANOVA4)
+TukeyHSD(ANOVA4)
+
+
+####CV analyses####
+
+#calculate CV for each Species, Guild, Origin, Replicate
+algae.cv<-ddply(.data=algae.subset.roll, .variables=.(Species, Guild, Trophic, Replicate), .fun= summarise, CV = sd(Mean)/mean(Mean))
+
+#pool across Replicates 
+algae.cv.mean<-ddply(.data=algae.cv, .variables=.(Species, Guild, Trophic), .fun= summarise, Mean = mean(CV), SE=sd(CV)/sqrt(length(CV)))
+
+#plot Figure 5
+Figure.5<-ggplot(algae.cv.mean, aes(x =Species, y = Mean, fill=Trophic))+geom_bar(stat = "identity",position="dodge")+xlab("Species")+ylab("Coefficent of variation (CV)")+
+  theme_minimal()+scale_fill_manual(values=c("black", "grey"))+
+  geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))+
+  facet_grid(~Guild)
+
+#run two-way ANOVA and TukeyHSD to determine differences between Trophic and Species  
+ANOVA5<- aov(CV ~ Trophic*Species, data=algae.cv)
+
+
+
+
+
+
+
+
