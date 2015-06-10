@@ -138,8 +138,8 @@ colnames(LD75.model.output)[2] <- "LD75"
 
 LD75.model.output.mean<-ddply(.data=LD50.model.output, .variables=.(Species, Trophic), .fun= summarise, Mean = mean(LD50), SE=sd(LD50)/sqrt(length(LD50)))
 
-#plot Figure 1 
-Figure.1<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic))+
+#plot Figure 2
+Figure.2<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic))+
   geom_bar(stat = "identity",position="dodge")+xlab("Species")+ylab("Day when 75% of snails consumed")+
   scale_fill_manual(values=c("black", "grey"))+
   geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))+
