@@ -136,7 +136,7 @@ colnames(LD75.model.output)[2] <- "LD75"
 
 
 
-LD75.model.output.mean<-ddply(.data=LD50.model.output, .variables=.(Species, Trophic), .fun= summarise, Mean = mean(LD50), SE=sd(LD50)/sqrt(length(LD50)))
+LD75.model.output.mean<-ddply(.data=LD75.model.output, .variables=.(Species, Trophic), .fun= summarise, Mean = mean(LD75), SE=sd(LD75)/sqrt(length(LD75)))
 
 #plot Figure 2
 Figure.2<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic))+
