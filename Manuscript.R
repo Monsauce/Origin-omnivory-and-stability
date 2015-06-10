@@ -17,13 +17,13 @@ snail.subset$Species<- factor(snail.subset$Species, levels=c("Limosus","Rusticus
 snail.subset<-snail.subset[snail.subset$Day!=49,]
 
 #pool across replicates
-snail.subset.mean<-ddply(.data=snail.subset, .variables=.(Day, Treatment, Species, Origin), .fun= summarise, Mean = mean(Density))
+snail.subset.mean<-ddply(.data=snail.subset, .variables=.(Day, Trophic, Species, Origin), .fun= summarise, Mean = mean(Density))
 
 #pool across replicates and day 
-snail.subset.mean.day<-ddply(.data=snail.subset, .variables=.(Treatment, Species, Origin, Replicate), .fun= summarise, Mean = mean(Density))
+snail.subset.mean.day<-ddply(.data=snail.subset, .variables=.(Trophic, Species, Origin, Replicate), .fun= summarise, Mean = mean(Density))
 
 #plot Figure S1 
-Figure.S1<-ggplot(snail.subset.mean, aes(x = Day, y = Mean))+geom_point()+facet_grid(Treatment~Species)+
+Figure.S1<-ggplot(snail.subset.mean, aes(x = Day, y = Mean))+geom_point()+facet_grid(Trophic~Species)+
   stat_smooth(se=F, colour="black", size=1)+
   theme_minimal()
 
@@ -32,7 +32,7 @@ Figure.S1<-ggplot(snail.subset.mean, aes(x = Day, y = Mean))+geom_point()+facet_
 library(MASS)
 
 #Limosus, Omnivore 
-LO.snail<-snail.subset[snail.subset$Species=="Limosus" & snail.subset$Treatment %in% "Omnivore",] 
+LO.snail<-snail.subset[snail.subset$Species=="Limosus" & snail.subset$Trophic %in% "Omnivore",] 
 attach(LO.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -44,7 +44,7 @@ LO.snail.model.outputs<-ddply(LO.snail, "Replicate", function(x){
 
 
 #Limosus, Predator 
-LP.snail<-snail.subset[snail.subset$Species=="Limosus" & snail.subset$Treatment %in% "Predator",] 
+LP.snail<-snail.subset[snail.subset$Species=="Limosus" & snail.subset$Trophic %in% "Predator",] 
 attach(LP.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -56,7 +56,7 @@ LP.snail.model.outputs<-ddply(LP.snail, "Replicate", function(x){
 
 
 #Rusticus, Omnivore 
-RO.snail<-snail.subset[snail.subset$Species=="Rusticus " & snail.subset$Treatment %in% "Omnivore",] 
+RO.snail<-snail.subset[snail.subset$Species=="Rusticus " & snail.subset$Trophic %in% "Omnivore",] 
 attach(RO.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -68,7 +68,7 @@ RO.snail.model.outputs<-ddply(RO.snail, "Replicate", function(x){
 
 
 #Rusticus, Predator 
-RP.snail<-snail.subset[snail.subset$Species=="Rusticus " & snail.subset$Treatment %in% "Predator",] 
+RP.snail<-snail.subset[snail.subset$Species=="Rusticus " & snail.subset$Trophic %in% "Predator",] 
 attach(RP.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -80,7 +80,7 @@ RP.snail.model.outputs<-ddply(RP.snail, "Replicate", function(x){
 
 
 #Propinquus, Omnivore
-PO.snail<-snail.subset[snail.subset$Species=="Propinquus" & snail.subset$Treatment %in% "Omnivore",] 
+PO.snail<-snail.subset[snail.subset$Species=="Propinquus" & snail.subset$Trophic %in% "Omnivore",] 
 attach(PO.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -92,7 +92,7 @@ PO.snail.model.outputs<-ddply(PO.snail, "Replicate", function(x){
 
 
 #Propinquus, Predator
-PP.snail<-snail.subset[snail.subset$Species=="Propinquus" & snail.subset$Treatment %in% "Predator",] 
+PP.snail<-snail.subset[snail.subset$Species=="Propinquus" & snail.subset$Trophic %in% "Predator",] 
 attach(PP.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -104,7 +104,7 @@ PP.snail.model.outputs<-ddply(PP.snail, "Replicate", function(x){
 
 
 #Virilis, Omnivore
-VO.snail<-snail.subset[snail.subset$Species=="Virilis " & snail.subset$Treatment %in% "Omnivore",] 
+VO.snail<-snail.subset[snail.subset$Species=="Virilis " & snail.subset$Trophic %in% "Omnivore",] 
 attach(VO.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -116,7 +116,7 @@ VO.snail.model.outputs<-ddply(VO.snail, "Replicate", function(x){
 
 
 #Virilis, Predator
-VP.snail<-snail.subset[snail.subset$Species=="Virilis " & snail.subset$Treatment %in% "Predator",] 
+VP.snail<-snail.subset[snail.subset$Species=="Virilis " & snail.subset$Trophic %in% "Predator",] 
 attach(VP.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -131,7 +131,7 @@ LD75.model.output <- rbind(LO.snail.model.outputs,RO.snail.model.outputs, PO.sna
                            LP.snail.model.outputs, RP.snail.model.outputs, PP.snail.model.outputs, VP.snail.model.outputs)
 
 LD75.model.output$Species<-snail.subset.mean.day$Species
-LD75.model.output$Trophic<-snail.subset.mean.day$Treatment
+LD75.model.output$Trophic<-snail.subset.mean.day$Trophic
 colnames(LD75.model.output)[2] <- "LD75"
 
 
