@@ -8,7 +8,7 @@ library(plyr)
 snail.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/Snail.csv")
 snail<-read.csv(text=snail.URL)
 
-#conver negatives to zeroes in Snail$Consumed 
+#convert negatives to zeroes in Snail$Consumed 
 snail$Consumed[snail$Consumed<0]<- 0
 
 #pull out only crayfish treatments and order factors
@@ -249,9 +249,8 @@ Figure.5<-ggplot(algae.cv.mean, aes(x =Species, y = Mean, fill=Trophic))+geom_ba
   facet_wrap(~Guild)
 
 #run two-way ANOVA and TukeyHSD to determine differences between Trophic and Species  
-ANOVA5<- aov(CV ~ Trophic*Species, data=algae.cv)
-
-
+ANOVA5<- aov(CV ~ Trophic*Guild, data=algae.cv)
+TukeyHSD(ANOVA5)
 
 
 
