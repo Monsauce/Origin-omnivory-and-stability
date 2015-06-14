@@ -170,15 +170,23 @@ algae.subset.roll<-algae.subset.roll[algae.subset.roll$Day%in%c("3","9","15","19
 algae.subset.roll.mean<-ddply(.data=algae.subset.roll, .variables=.(Trophic, Species, Day,Origin,Guild), .fun= summarise, Mean = mean(Mean))
 
 library(mgcv)
-mod.1<-gam(Mean~s(Day)+s(Day, by=Guild)+Guild+Trophic*Origin, data=algae.subset.roll)#used this model 
+mod.1<-gam(Mean~s(Day)+s(Day, by=Guild)+Guild+Trophic*Origin, data=algae.subset.roll)
 
 mod.2<-gam(Mean~s(Day)+Guild+Trophic*Origin, data=algae.subset.roll) 
 
 #compare with ANOVA if interaction is significant keep it 
 anova(mod.1, mod.2, test='Chisq')
 
-#inspect mod.1 results
-summary(mod.1)
+#Origin not significant and dropped
+
+mod.3<-gam(Mean~s(Day, by=Guild)+Guild+Trophic, data=algae.subset.roll)#used this model 
+
+#model selection 
+AIC(mod.1, mod.2, mod.3)
+
+#inspect mod.3 results
+summary(mod.3)
+
 #plot Figure 3a
 Figure.3.a<-ggplot(algae.subset.roll.mean, aes(x=Day,y=Mean, colour= Trophic))+geom_point()+facet_wrap(Species~Guild)+
   stat_smooth(se=F, size=1, method="loess")+
