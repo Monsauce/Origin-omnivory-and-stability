@@ -149,7 +149,10 @@ Figure.2<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic
 
 #run two-way ANOVA and TukeyHSD to determine differences between Species
 ANOVA1<-aov(LD75~Species*Trophic, data=LD75.model.output)
-TukeyHSD(ANOVA1)
+TukeyANOVA1<-TukeyHSD(ANOVA1)
+
+#Table S1
+Table.S1<-TukeyANOVA1$Species
 
 ####Algae analyses####  
 library(zoo)
@@ -232,7 +235,6 @@ TukeyHSD(ANOVA3)
 ANOVA4<- aov(d15N ~ Origin*Trophic, data=SIA)
 summary(ANOVA4)
 TukeyHSD(ANOVA4)
-
 
 ####CV analyses####
 
