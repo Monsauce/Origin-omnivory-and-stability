@@ -248,11 +248,31 @@ algae.cv.mean<-ddply(.data=algae.cv, .variables=.(Species, Guild, Trophic), .fun
 Figure.5<-ggplot(algae.cv.mean, aes(x =Species, y = Mean, fill=Trophic))+geom_bar(stat = "identity",position="dodge")+xlab("Species")+ylab("Coefficent of variation (CV)")+
   theme_minimal()+scale_fill_manual(values=c("black", "grey"))+
   geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))+
-  facet_wrap(~Guild)
+  scale_y_continuous(limits=c(0, 1.5))+
+  facet_wrap(~Guild, scales="free")
 
 #run two-way ANOVA and TukeyHSD to determine differences between Trophic and Species  
 ANOVA5<- aov(CV ~ Trophic*Guild, data=algae.cv)
 TukeyHSD(ANOVA5)
+
+####Crayfish lengths
+length.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/Lengths.csv")
+length<-read.csv(text=length.URL)
+
+length$Species<- factor(length$Species, levels=c("Limosus","Rusticus ", "Propinquus", "Virilis "))#order factors
+
+length.mean<-ddply(.data=length, .variables=.(Trophic, Species), .fun= summarise, Mean = mean(Length), SE=sd(Length)/sqrt(length(Length)))
+
+#plot Figure S2
+Figure.S2<-ggplot(length.mean, aes(x = Species, y = Mean, fill=Trophic))+ geom_bar(stat = "identity",position="dodge")+xlab("Species")+
+  ylab("Length")+theme_minimal()+
+  scale_fill_manual(values=c("black", "grey"))+
+  geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))
+
+#run one-way ANOVA and TukeyHSD to determine differences between Species  
+ANOVA6 <- aov(Length ~ Species, data=length)
+TukeyHSD(ANOVA6)
+
 
 
 
