@@ -5,7 +5,7 @@ library(plyr)
 
 ####Snail analyses####
 #read in snail data from GitHub
-snail.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/Snail.csv")
+snail.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/Snail.csv")
 snail<-read.csv(text=snail.URL)
 
 #convert negatives to zeroes in Snail$Consumed 
@@ -158,7 +158,7 @@ Table.S1<-TukeyANOVA1$Species
 library(zoo)
 
 #read in algae data from GitHub
-algae.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/Algae.csv")
+algae.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/Algae.csv")
 algae<-read.csv(text=algae.URL)
 
 #pull out only crayfish treatments and order factors
@@ -208,7 +208,7 @@ vis.gam(mod.3$gam, view=c("Day","Guild"), color = "topo", theta=140, phi=10, tic
 
 ####Stable isotope analyses####
 #read in stable isotope data from GitHub
-SIA.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/SIA.csv")
+SIA.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/SIA.csv")
 SIA<-read.csv(text=SIA.URL)
 
 #pull out only crayfish treatments and order factors
@@ -257,7 +257,7 @@ ANOVA5<- aov(CV ~ Trophic*Guild, data=algae.cv)
 TukeyHSD(ANOVA5)
 
 ####Crayfish lengths
-length.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Size-does-matter-/master/Lengths.csv")
+length.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/Lengths.csv")
 length<-read.csv(text=length.URL)
 
 length$Species<- factor(length$Species, levels=c("Limosus","Rusticus ", "Propinquus", "Virilis "))#order factors
