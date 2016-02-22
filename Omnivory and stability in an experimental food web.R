@@ -134,11 +134,11 @@ LD75.model.output <- rbind(LO.snail.model.outputs,RO.snail.model.outputs, PO.sna
 
 LD75.model.output$Species<-snail.subset.mean.day$Species
 LD75.model.output$Trophic<-snail.subset.mean.day$Trophic
+LD75.model.output$Origin<-snail.subset.mean.day$Origin
 colnames(LD75.model.output)[2] <- "LD75"
 
 
-
-LD75.model.output.mean<-ddply(.data=LD75.model.output, .variables=.(Species, Trophic), .fun= summarise, Mean = mean(LD75), SE=sd(LD75)/sqrt(length(LD75)))
+LD75.model.output.mean<-ddply(.data=LD75.model.output, .variables=.(Species, Trophic, Origin), .fun= summarise, Mean = mean(LD75), SE=sd(LD75)/sqrt(length(LD75)))
 
 #plot Figure 2
 Figure.2<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic))+
@@ -148,11 +148,15 @@ Figure.2<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic
   theme_minimal()
 
 #run two-way ANOVA and TukeyHSD to determine differences between Species
-ANOVA1<-aov(LD75~Species*Trophic, data=LD75.model.output)
-TukeyANOVA1<-TukeyHSD(ANOVA1)
+ANOVA1<-aov(LD75~Trophic*Origin, data=LD75.model.output)
+
+#run two-way ANOVA and TukeyHSD to determine differences between Species
+ANOVA2<-aov(LD75~Species*Trophic, data=LD75.model.output)
+TukeyANOVA2<-TukeyHSD(ANOVA2)
 
 #Table S1
-Table.S1<-TukeyANOVA1$Species
+Table.S1<-TukeyANOVA2$Species
+
 
 ####Algae analyses####  
 library(zoo)
@@ -166,33 +170,25 @@ algae.subset<-algae[algae$Species%in%c("Limosus", "Propinquus","Rusticus ","Viri
 algae.subset$Species<- factor(algae.subset$Species, levels=c("Limosus","Rusticus ", "Propinquus", "Virilis "))
 
 #reduce spatial heterogenity and take rolling mean across 3 days 
-algae.subset.roll<-ddply(.data=algae.subset, .variables=.(Trophic, Species, Replicate,Origin,Guild), .fun= transform, Mean = rollmean(Density, 3, fill=NA, align="center"))
+algae.subset.roll<-ddply(.data=algae.subset, .variables=.(Trophic, Species, Replicate,Origin), .fun= transform, Mean = rollmean(Density, 3, fill=NA, align="center"))
 algae.subset.roll<-algae.subset.roll[algae.subset.roll$Day%in%c("3","9","15","19","21","27","33","39","45","51","57"),]
 
 #pool data across Replicates 
-algae.subset.roll.mean<-ddply(.data=algae.subset.roll, .variables=.(Trophic, Species, Day,Origin,Guild), .fun= summarise, Mean = mean(Mean))
+algae.subset.roll.mean<-ddply(.data=algae.subset.roll, .variables=.(Trophic, Species, Day,Origin), .fun= summarise, Mean = mean(Mean))
 
 library(mgcv)
-mod.1<-gam(Mean~s(Day)+s(Day, by=Guild)+Guild+Trophic*Origin, data=algae.subset.roll)
 
-mod.2<-gam(Mean~s(Day)+Guild+Trophic*Origin, data=algae.subset.roll) 
+mod.1<-gam(Mean~ s(Day)+Trophic*Origin, data=algae.subset.roll)
+mod.2<-gam(Mean~ s(Day)+Trophic+Origin, data=algae.subset.roll) 
+mod.3<-gam(Mean~ s(Day)+Trophic, data=algae.subset.roll) 
+mod.4<-gam(Mean~ s(Day), data=algae.subset.roll) 
 
-#compare with ANOVA if interaction is significant keep it 
-anova(mod.1, mod.2, test='Chisq')
+require(bbmle)
+ICtab(mod.1,mod.2,mod.3,mod.4, type="AICc") #rank model 
 
-#Origin not significant and dropped
-summary(mod.2)
-
-mod.3<-gam(Mean~s(Day, by=Guild)+Guild+Trophic, data=algae.subset.roll)#used this model 
-
-#model selection 
-AIC(mod.1, mod.2, mod.3)
-
-#inspect mod.3 results
-summary(mod.3)
 
 #plot Figure 3a
-Figure.3.a<-ggplot(algae.subset.roll.mean, aes(x=Day,y=Mean, colour= Trophic))+geom_point()+facet_wrap(Species~Guild)+
+Figure.3a<-ggplot(algae.subset.roll.mean, aes(x=Day,y=Mean, colour= Trophic))+geom_point()+facet_wrap(Species~Guild)+
   stat_smooth(se=F, size=1, method="loess")+
   scale_colour_manual(values=c("black", "grey"))+
   scale_y_log10(breaks=c(20,100,500))+
@@ -203,8 +199,8 @@ Figure.3.a<-ggplot(algae.subset.roll.mean, aes(x=Day,y=Mean, colour= Trophic))+g
 library(gamm4)
 algae.subset.roll$Day <- as.numeric(algae.subset.roll$Day)
 algae.subset.roll$Day <- algae.subset.roll$Day + rnorm(341,0,0.1)
-mod.3<-gamm4(Mean~s(Day, by=Guild)+Guild+Trophic, data=algae.subset.roll,REML=F)
-vis.gam(mod.3$gam, view=c("Day","Guild"), color = "topo", theta=140, phi=10, ticktype="detailed")
+mod.5<-gamm4(Mean~ s(Day)+Trophic, data=algae.subset.roll,REML=F)
+vis.gam(mod.5$gam, view=c("Day","Trophic"), color = "topo", theta=140, phi=10, ticktype="detailed")
 
 ####Stable isotope analyses####
 #read in stable isotope data from GitHub
@@ -219,8 +215,8 @@ SIA.mean<-ddply(.data=SIA, .variables=.(Species,Trophic), .fun= summarise, MeanC
 SIA.SD<-ddply(.data=SIA, .variables=.(Species, Trophic), .fun= summarise, SDC = sd(d15C), SDN = sd(d15N))
 SIA.DF<-merge(SIA.mean,SIA.SD)
 
-#plot Figure 4
-Figure.4<-ggplot(SIA.DF, aes(x =MeanC, y = MeanN, colour=Trophic))+geom_point(aes(shape = Species, size=3))+
+#plot stable isotopes 
+Istotope.Plot<-ggplot(SIA.DF, aes(x =MeanC, y = MeanN, colour=Trophic))+geom_point(aes(shape = Species, size=3))+
   geom_errorbar(aes(ymin=MeanN-SDN, ymax=MeanN+SDN))+
   geom_errorbarh(aes(xmax = MeanC + SDC, xmin = MeanC - SDC))+
   theme_minimal()+
@@ -240,21 +236,26 @@ TukeyHSD(ANOVA4)
 ####CV analyses####
 
 #calculate CV for each Species, Guild, Origin, Replicate
-algae.cv<-ddply(.data=algae.subset.roll, .variables=.(Species, Guild, Trophic, Replicate), .fun= summarise, CV = sd(Mean)/mean(Mean))
+algae.cv<-ddply(.data=algae.subset.roll, .variables=.(Species, Trophic, Replicate, Origin), .fun= summarise, CV = sd(Mean)/mean(Mean))
 
 #pool across Replicates 
-algae.cv.mean<-ddply(.data=algae.cv, .variables=.(Species, Guild, Trophic), .fun= summarise, Mean = mean(CV), SE=sd(CV)/sqrt(length(CV)))
+algae.cv.mean<-ddply(.data=algae.cv, .variables=.(Species,Trophic, Origin), .fun= summarise, Mean = mean(CV), SE=sd(CV)/sqrt(length(CV)))
 
-#plot Figure 5
-Figure.5<-ggplot(algae.cv.mean, aes(x =Species, y = Mean, fill=Trophic))+geom_bar(stat = "identity",position="dodge")+xlab("Species")+ylab("Coefficent of variation (CV)")+
+#plot Figure 4
+Figure.4<-ggplot(algae.cv.mean, aes(x =Species, y = Mean, fill=Trophic))+geom_bar(stat = "identity",position="dodge")+xlab("Species")+ylab("Coefficent of variation (CV)")+
   theme_minimal()+scale_fill_manual(values=c("black", "grey"))+
   geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))+
   scale_y_continuous(limits=c(0, 1.5))+
-  facet_wrap(~Guild, scales="free")
+  facet_wrap(~Origin, scales="free")
 
-#run two-way ANOVA and TukeyHSD to determine differences between Trophic and Species  
-ANOVA5<- aov(CV ~ Trophic*Guild, data=algae.cv)
-TukeyHSD(ANOVA5)
+#run two-way ANOVA and TukeyHSD to determine differences between Origin, Trophic and Species  
+ANOVA5<- aov(CV ~ Trophic*Origin, data=algae.cv)
+
+ANOVA6<- aov(CV ~ Trophic*Species, data=algae.cv)
+TukeyHSD(ANOVA6)
+
+#Table S2
+Table.S2<-TukeyANOVA6$Species
 
 ####Crayfish lengths
 length.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/Lengths.csv")
@@ -271,8 +272,8 @@ Figure.S2<-ggplot(length.mean, aes(x = Species, y = Mean, fill=Trophic))+ geom_b
   geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))
 
 #run one-way ANOVA and TukeyHSD to determine differences between Species  
-ANOVA6 <- aov(Length ~ Species, data=length)
-TukeyHSD(ANOVA6)
+ANOVA7 <- aov(Length ~ Species, data=length)
+TukeyHSD(ANOVA7)
 
 
 
