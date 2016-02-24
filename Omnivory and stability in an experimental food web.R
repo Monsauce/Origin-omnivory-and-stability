@@ -184,7 +184,11 @@ mod.3<-gam(Mean~ s(Day)+Trophic, data=algae.subset.roll)
 mod.4<-gam(Mean~ s(Day), data=algae.subset.roll) 
 
 require(bbmle)
-ICtab(mod.1,mod.2,mod.3,mod.4, type="AICc") #rank model 
+AIC<-AICctab(mod.1,mod.2,mod.3,mod.4, base=T) #rank models 
+
+require(qpcR)
+#get weights 
+akaike.weights(AIC$AICc)
 
 
 #plot Figure 3a
