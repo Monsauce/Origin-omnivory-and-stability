@@ -181,10 +181,11 @@ library(mgcv)
 mod.1<-gam(Mean~ s(Day)+Trophic*Origin, data=algae.subset.roll)
 mod.2<-gam(Mean~ s(Day)+Trophic+Origin, data=algae.subset.roll) 
 mod.3<-gam(Mean~ s(Day)+Trophic, data=algae.subset.roll) 
-mod.4<-gam(Mean~ s(Day), data=algae.subset.roll) 
+mod.4<-gam(Mean~ s(Day)+Origin, data=algae.subset.roll) 
+mod.5<-gam(Mean~ s(Day), data=algae.subset.roll) 
 
 require(bbmle)
-AIC<-AICctab(mod.1,mod.2,mod.3,mod.4, base=T) #rank models 
+AIC<-AICctab(mod.1,mod.2,mod.3,mod.4,mod.5, base=T) #rank models 
 
 require(qpcR)
 #get weights 
