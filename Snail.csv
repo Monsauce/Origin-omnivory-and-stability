@@ -1,1 +1,561 @@
-Day,Trophic,Species,Origin,Mesocosm,Replicate,Density,Alive ,Consumed1,Snail,Snail,NA,2,1,22,22,05,Snail,Snail,NA,2,1,21,21,19,Snail,Snail,NA,2,1,8,8,1413,Snail,Snail,NA,2,1,9,9,1317,Snail,Snail,NA,2,1,7,7,1521,Snail,Snail,NA,2,1,11,11,1125,Snail,Snail,NA,2,1,1,1,2129,Snail,Snail,NA,2,1,4,4,1833,Snail,Snail,NA,2,1,3,3,1937,Snail,Snail,NA,2,1,8,8,1441,Snail,Snail,NA,2,1,8,8,1445,Snail,Snail,NA,2,1,6,6,1649,Snail,Snail,NA,2,1,4,4,1853,Snail,Snail,NA,2,1,2,2,2057,Snail,Snail,NA,2,1,7,7,1563,Snail,Snail,NA,2,1,5,5,171,Snail,Snail,NA,15,2,22,22,05,Snail,Snail,NA,15,2,27,27,-59,Snail,Snail,NA,15,2,18,18,413,Snail,Snail,NA,15,2,12,12,1017,Snail,Snail,NA,15,2,7,7,1521,Snail,Snail,NA,15,2,5,5,1725,Snail,Snail,NA,15,2,5,5,1729,Snail,Snail,NA,15,2,3,3,1933,Snail,Snail,NA,15,2,3,3,1937,Snail,Snail,NA,15,2,4,4,1841,Snail,Snail,NA,15,2,2,2,2045,Snail,Snail,NA,15,2,5,5,1749,Snail,Snail,NA,15,2,2,2,2053,Snail,Snail,NA,15,2,3,3,1957,Snail,Snail,NA,15,2,7,7,1563,Snail,Snail,NA,15,2,3,3,191,Snail,Snail,NA,37,3,15,15,05,Snail,Snail,NA,37,3,26,26,-119,Snail,Snail,NA,37,3,11,11,413,Snail,Snail,NA,37,3,10,10,517,Snail,Snail,NA,37,3,3,3,1221,Snail,Snail,NA,37,3,5,5,1025,Snail,Snail,NA,37,3,6,6,929,Snail,Snail,NA,37,3,7,7,833,Snail,Snail,NA,37,3,4,4,1137,Snail,Snail,NA,37,3,5,5,1041,Snail,Snail,NA,37,3,5,5,1045,Snail,Snail,NA,37,3,5,5,1049,Snail,Snail,NA,37,3,4,4,1153,Snail,Snail,NA,37,3,4,4,1157,Snail,Snail,NA,37,3,4,4,1163,Snail,Snail,NA,37,3,4,4,111,Snail,Snail,NA,8,4,19,19,05,Snail,Snail,NA,8,4,19,19,09,Snail,Snail,NA,8,4,17,17,213,Snail,Snail,NA,8,4,13,13,617,Snail,Snail,NA,8,4,12,12,721,Snail,Snail,NA,8,4,12,12,725,Snail,Snail,NA,8,4,11,11,829,Snail,Snail,NA,8,4,7,7,1233,Snail,Snail,NA,8,4,6,6,1337,Snail,Snail,NA,8,4,2,2,1741,Snail,Snail,NA,8,4,3,3,1645,Snail,Snail,NA,8,4,4,4,1549,Snail,Snail,NA,8,4,4,4,1553,Snail,Snail,NA,8,4,4,4,1557,Snail,Snail,NA,8,4,3,3,1663,Snail,Snail,NA,8,4,5,5,141,Omnivore,Limosus,Invasive,34,1,25,25,05,Omnivore,Limosus,Invasive,34,1,12,12,139,Omnivore,Limosus,Invasive,34,1,8,8,1713,Omnivore,Limosus,Invasive,34,1,6,6,1917,Omnivore,Limosus,Invasive,34,1,7,7,1821,Omnivore,Limosus,Invasive,34,1,5,5,2025,Omnivore,Limosus,Invasive,34,1,4,4,2129,Omnivore,Limosus,Invasive,34,1,0,0,2533,Omnivore,Limosus,Invasive,34,1,2,2,2337,Omnivore,Limosus,Invasive,34,1,2,2,2341,Omnivore,Limosus,Invasive,34,1,1,1,2445,Omnivore,Limosus,Invasive,34,1,0,0,2549,Omnivore,Limosus,Invasive,34,1,1,1,2453,Omnivore,Limosus,Invasive,34,1,0,0,2557,Omnivore,Limosus,Invasive,34,1,1,1,2463,Omnivore,Limosus,Invasive,34,1,0,0,251,Omnivore,Limosus,Invasive,9,2,31,31,05,Omnivore,Limosus,Invasive,9,2,19,19,129,Omnivore,Limosus,Invasive,9,2,10,10,2113,Omnivore,Limosus,Invasive,9,2,6,6,2517,Omnivore,Limosus,Invasive,9,2,7,7,2421,Omnivore,Limosus,Invasive,9,2,6,6,2525,Omnivore,Limosus,Invasive,9,2,2,2,2929,Omnivore,Limosus,Invasive,9,2,10,10,2133,Omnivore,Limosus,Invasive,9,2,4,4,2737,Omnivore,Limosus,Invasive,9,2,5,5,2641,Omnivore,Limosus,Invasive,9,2,2,2,2945,Omnivore,Limosus,Invasive,9,2,3,3,2849,Omnivore,Limosus,Invasive,9,2,1,1,3053,Omnivore,Limosus,Invasive,9,2,1,1,3057,Omnivore,Limosus,Invasive,9,2,3,3,2863,Omnivore,Limosus,Invasive,9,2,1,1,301,Omnivore,Limosus,Invasive,7,3,16,16,05,Omnivore,Limosus,Invasive,7,3,24,24,-89,Omnivore,Limosus,Invasive,7,3,20,20,-413,Omnivore,Limosus,Invasive,7,3,17,17,-117,Omnivore,Limosus,Invasive,7,3,12,12,421,Omnivore,Limosus,Invasive,7,3,11,11,525,Omnivore,Limosus,Invasive,7,3,9,9,729,Omnivore,Limosus,Invasive,7,3,2,2,1433,Omnivore,Limosus,Invasive,7,3,2,2,1437,Omnivore,Limosus,Invasive,7,3,0,0,1641,Omnivore,Limosus,Invasive,7,3,1,1,1545,Omnivore,Limosus,Invasive,7,3,0,0,1649,Omnivore,Limosus,Invasive,7,3,0,0,1653,Omnivore,Limosus,Invasive,7,3,0,0,1657,Omnivore,Limosus,Invasive,7,3,0,0,1663,Omnivore,Limosus,Invasive,7,3,0,0,161,Omnivore,Limosus,Invasive,22,4,18,18,05,Omnivore,Limosus,Invasive,22,4,21,21,-39,Omnivore,Limosus,Invasive,22,4,17,17,113,Omnivore,Limosus,Invasive,22,4,12,12,617,Omnivore,Limosus,Invasive,22,4,14,14,421,Omnivore,Limosus,Invasive,22,4,11,11,725,Omnivore,Limosus,Invasive,22,4,8,8,1029,Omnivore,Limosus,Invasive,22,4,6,6,1233,Omnivore,Limosus,Invasive,22,4,4,4,1437,Omnivore,Limosus,Invasive,22,4,3,3,1541,Omnivore,Limosus,Invasive,22,4,7,7,1145,Omnivore,Limosus,Invasive,22,4,3,3,1549,Omnivore,Limosus,Invasive,22,4,1,1,1753,Omnivore,Limosus,Invasive,22,4,5,5,1357,Omnivore,Limosus,Invasive,22,4,3,3,1563,Omnivore,Limosus,Invasive,22,4,6,6,121,Predator,Limosus,Invasive,28,1,25,25,05,Predator,Limosus,Invasive,28,1,22,22,39,Predator,Limosus,Invasive,28,1,11,11,1413,Predator,Limosus,Invasive,28,1,8,8,1717,Predator,Limosus,Invasive,28,1,4,4,2121,Predator,Limosus,Invasive,28,1,1,1,2425,Predator,Limosus,Invasive,28,1,1,1,2429,Predator,Limosus,Invasive,28,1,1,1,2433,Predator,Limosus,Invasive,28,1,1,1,2437,Predator,Limosus,Invasive,28,1,0,0,2541,Predator,Limosus,Invasive,28,1,1,1,2445,Predator,Limosus,Invasive,28,1,0,0,2549,Predator,Limosus,Invasive,28,1,0,0,2553,Predator,Limosus,Invasive,28,1,0,0,2557,Predator,Limosus,Invasive,28,1,0,0,2563,Predator,Limosus,Invasive,28,1,0,0,251,Predator,Limosus,Invasive,36,2,11,11,05,Predator,Limosus,Invasive,36,2,20,20,-99,Predator,Limosus,Invasive,36,2,19,19,-813,Predator,Limosus,Invasive,36,2,15,15,-417,Predator,Limosus,Invasive,36,2,14,14,-321,Predator,Limosus,Invasive,36,2,8,8,325,Predator,Limosus,Invasive,36,2,13,13,-229,Predator,Limosus,Invasive,36,2,6,6,533,Predator,Limosus,Invasive,36,2,7,7,437,Predator,Limosus,Invasive,36,2,9,9,241,Predator,Limosus,Invasive,36,2,2,2,945,Predator,Limosus,Invasive,36,2,2,2,949,Predator,Limosus,Invasive,36,2,2,2,953,Predator,Limosus,Invasive,36,2,4,4,757,Predator,Limosus,Invasive,36,2,0,0,1163,Predator,Limosus,Invasive,36,2,0,0,111,Predator,Limosus,Invasive,33,3,24,24,05,Predator,Limosus,Invasive,33,3,18,18,69,Predator,Limosus,Invasive,33,3,19,19,513,Predator,Limosus,Invasive,33,3,22,22,217,Predator,Limosus,Invasive,33,3,9,9,1521,Predator,Limosus,Invasive,33,3,4,4,2025,Predator,Limosus,Invasive,33,3,6,6,1829,Predator,Limosus,Invasive,33,3,5,5,1933,Predator,Limosus,Invasive,33,3,1,1,2337,Predator,Limosus,Invasive,33,3,6,6,1841,Predator,Limosus,Invasive,33,3,7,7,1745,Predator,Limosus,Invasive,33,3,1,1,2349,Predator,Limosus,Invasive,33,3,0,0,2453,Predator,Limosus,Invasive,33,3,1,1,2357,Predator,Limosus,Invasive,33,3,2,2,2263,Predator,Limosus,Invasive,33,3,0,0,241,Predator,Limosus,Invasive,23,4,33,33,05,Predator,Limosus,Invasive,23,4,37,37,-49,Predator,Limosus,Invasive,23,4,25,25,813,Predator,Limosus,Invasive,23,4,15,15,1817,Predator,Limosus,Invasive,23,4,14,14,1921,Predator,Limosus,Invasive,23,4,8,8,2525,Predator,Limosus,Invasive,23,4,10,10,2329,Predator,Limosus,Invasive,23,4,12,12,2133,Predator,Limosus,Invasive,23,4,4,4,2937,Predator,Limosus,Invasive,23,4,8,8,2541,Predator,Limosus,Invasive,23,4,3,3,3045,Predator,Limosus,Invasive,23,4,11,11,2249,Predator,Limosus,Invasive,23,4,5,5,2853,Predator,Limosus,Invasive,23,4,3,3,3057,Predator,Limosus,Invasive,23,4,7,7,2663,Predator,Limosus,Invasive,23,4,8,8,251,Omnivore,Propinquus,Native,10,1,24,24,05,Omnivore,Propinquus,Native,10,1,14,14,109,Omnivore,Propinquus,Native,10,1,7,7,1713,Omnivore,Propinquus,Native,10,1,3,3,2117,Omnivore,Propinquus,Native,10,1,1,1,2321,Omnivore,Propinquus,Native,10,1,0,0,2425,Omnivore,Propinquus,Native,10,1,0,0,2429,Omnivore,Propinquus,Native,10,1,0,0,2433,Omnivore,Propinquus,Native,10,1,0,0,2437,Omnivore,Propinquus,Native,10,1,0,0,2441,Omnivore,Propinquus,Native,10,1,0,0,2445,Omnivore,Propinquus,Native,10,1,0,0,2449,Omnivore,Propinquus,Native,10,1,0,0,2453,Omnivore,Propinquus,Native,10,1,0,0,2457,Omnivore,Propinquus,Native,10,1,0,0,2463,Omnivore,Propinquus,Native,10,1,0,0,241,Omnivore,Propinquus,Native,18,2,25,25,05,Omnivore,Propinquus,Native,18,2,17,17,89,Omnivore,Propinquus,Native,18,2,10,10,1513,Omnivore,Propinquus,Native,18,2,3,3,2217,Omnivore,Propinquus,Native,18,2,1,1,2421,Omnivore,Propinquus,Native,18,2,0,0,2525,Omnivore,Propinquus,Native,18,2,0,0,2529,Omnivore,Propinquus,Native,18,2,0,0,2533,Omnivore,Propinquus,Native,18,2,1,1,2437,Omnivore,Propinquus,Native,18,2,0,0,2541,Omnivore,Propinquus,Native,18,2,0,0,2545,Omnivore,Propinquus,Native,18,2,0,0,2549,Omnivore,Propinquus,Native,18,2,0,0,2553,Omnivore,Propinquus,Native,18,2,0,0,2557,Omnivore,Propinquus,Native,18,2,0,0,2563,Omnivore,Propinquus,Native,18,2,0,0,251,Omnivore,Propinquus,Native,16,3,26,26,05,Omnivore,Propinquus,Native,16,3,6,6,209,Omnivore,Propinquus,Native,16,3,2,2,2413,Omnivore,Propinquus,Native,16,3,2,2,2417,Omnivore,Propinquus,Native,16,3,0,0,2621,Omnivore,Propinquus,Native,16,3,1,1,2525,Omnivore,Propinquus,Native,16,3,2,2,2429,Omnivore,Propinquus,Native,16,3,0,0,2633,Omnivore,Propinquus,Native,16,3,0,0,2637,Omnivore,Propinquus,Native,16,3,0,0,2641,Omnivore,Propinquus,Native,16,3,0,0,2645,Omnivore,Propinquus,Native,16,3,0,0,2649,Omnivore,Propinquus,Native,16,3,0,0,2653,Omnivore,Propinquus,Native,16,3,0,0,2657,Omnivore,Propinquus,Native,16,3,0,0,2663,Omnivore,Propinquus,Native,16,3,0,0,261,Omnivore,Propinquus,Native,6,4,17,17,05,Omnivore,Propinquus,Native,6,4,15,15,29,Omnivore,Propinquus,Native,6,4,9,9,813,Omnivore,Propinquus,Native,6,4,3,3,1417,Omnivore,Propinquus,Native,6,4,2,2,1521,Omnivore,Propinquus,Native,6,4,3,3,1425,Omnivore,Propinquus,Native,6,4,5,5,1229,Omnivore,Propinquus,Native,6,4,3,3,1433,Omnivore,Propinquus,Native,6,4,4,4,1337,Omnivore,Propinquus,Native,6,4,4,4,1341,Omnivore,Propinquus,Native,6,4,2,2,1545,Omnivore,Propinquus,Native,6,4,0,0,1749,Omnivore,Propinquus,Native,6,4,1,1,1653,Omnivore,Propinquus,Native,6,4,1,1,1657,Omnivore,Propinquus,Native,6,4,0,0,1763,Omnivore,Propinquus,Native,6,4,1,1,161,Predator,Propinquus,Native,31,1,28,28,05,Predator,Propinquus,Native,31,1,21,21,79,Predator,Propinquus,Native,31,1,20,20,813,Predator,Propinquus,Native,31,1,16,16,1217,Predator,Propinquus,Native,31,1,10,10,1821,Predator,Propinquus,Native,31,1,15,15,1325,Predator,Propinquus,Native,31,1,10,10,1829,Predator,Propinquus,Native,31,1,10,10,1833,Predator,Propinquus,Native,31,1,10,10,1837,Predator,Propinquus,Native,31,1,3,3,2541,Predator,Propinquus,Native,31,1,9,9,1945,Predator,Propinquus,Native,31,1,6,6,2249,Predator,Propinquus,Native,31,1,6,6,2253,Predator,Propinquus,Native,31,1,7,7,2157,Predator,Propinquus,Native,31,1,3,3,2563,Predator,Propinquus,Native,31,1,5,5,231,Predator,Propinquus,Native,12,2,26,26,05,Predator,Propinquus,Native,12,2,24,24,29,Predator,Propinquus,Native,12,2,20,20,613,Predator,Propinquus,Native,12,2,12,12,1417,Predator,Propinquus,Native,12,2,3,3,2321,Predator,Propinquus,Native,12,2,4,4,2225,Predator,Propinquus,Native,12,2,4,4,2229,Predator,Propinquus,Native,12,2,4,4,2233,Predator,Propinquus,Native,12,2,0,0,2637,Predator,Propinquus,Native,12,2,1,1,2541,Predator,Propinquus,Native,12,2,0,0,2645,Predator,Propinquus,Native,12,2,0,0,2649,Predator,Propinquus,Native,12,2,0,0,2653,Predator,Propinquus,Native,12,2,0,0,2657,Predator,Propinquus,Native,12,2,0,0,2663,Predator,Propinquus,Native,12,2,0,0,261,Predator,Propinquus,Native,30,3,17,17,05,Predator,Propinquus,Native,30,3,17,17,09,Predator,Propinquus,Native,30,3,19,19,-213,Predator,Propinquus,Native,30,3,7,7,1017,Predator,Propinquus,Native,30,3,10,10,721,Predator,Propinquus,Native,30,3,5,5,1225,Predator,Propinquus,Native,30,3,6,6,1129,Predator,Propinquus,Native,30,3,7,7,1033,Predator,Propinquus,Native,30,3,5,5,1237,Predator,Propinquus,Native,30,3,3,3,1441,Predator,Propinquus,Native,30,3,1,1,1645,Predator,Propinquus,Native,30,3,4,4,1349,Predator,Propinquus,Native,30,3,1,1,1653,Predator,Propinquus,Native,30,3,8,8,957,Predator,Propinquus,Native,30,3,3,3,1463,Predator,Propinquus,Native,30,3,5,5,121,Predator,Propinquus,Native,39,4,35,35,05,Predator,Propinquus,Native,39,4,47,47,-129,Predator,Propinquus,Native,39,4,31,31,413,Predator,Propinquus,Native,39,4,25,25,1017,Predator,Propinquus,Native,39,4,15,15,2021,Predator,Propinquus,Native,39,4,17,17,1825,Predator,Propinquus,Native,39,4,2,2,3329,Predator,Propinquus,Native,39,4,7,7,2833,Predator,Propinquus,Native,39,4,10,10,2537,Predator,Propinquus,Native,39,4,10,10,2541,Predator,Propinquus,Native,39,4,6,6,2945,Predator,Propinquus,Native,39,4,4,4,3149,Predator,Propinquus,Native,39,4,5,5,3053,Predator,Propinquus,Native,39,4,2,2,3357,Predator,Propinquus,Native,39,4,0,0,3563,Predator,Propinquus,Native,39,4,4,4,311,Omnivore,Rusticus ,Invasive,26,1,17,17,05,Omnivore,Rusticus ,Invasive,26,1,4,4,139,Omnivore,Rusticus ,Invasive,26,1,5,5,1213,Omnivore,Rusticus ,Invasive,26,1,4,4,1317,Omnivore,Rusticus ,Invasive,26,1,0,0,1721,Omnivore,Rusticus ,Invasive,26,1,0,0,1725,Omnivore,Rusticus ,Invasive,26,1,0,0,1729,Omnivore,Rusticus ,Invasive,26,1,3,3,1433,Omnivore,Rusticus ,Invasive,26,1,0,0,1737,Omnivore,Rusticus ,Invasive,26,1,0,0,1741,Omnivore,Rusticus ,Invasive,26,1,0,0,1745,Omnivore,Rusticus ,Invasive,26,1,0,0,1749,Omnivore,Rusticus ,Invasive,26,1,0,0,1753,Omnivore,Rusticus ,Invasive,26,1,1,1,1657,Omnivore,Rusticus ,Invasive,26,1,1,1,1663,Omnivore,Rusticus ,Invasive,26,1,1,1,161,Omnivore,Rusticus ,Invasive,25,2,20,20,05,Omnivore,Rusticus ,Invasive,25,2,10,10,109,Omnivore,Rusticus ,Invasive,25,2,6,6,1413,Omnivore,Rusticus ,Invasive,25,2,1,1,1917,Omnivore,Rusticus ,Invasive,25,2,1,1,1921,Omnivore,Rusticus ,Invasive,25,2,2,2,1825,Omnivore,Rusticus ,Invasive,25,2,0,0,2029,Omnivore,Rusticus ,Invasive,25,2,0,0,2033,Omnivore,Rusticus ,Invasive,25,2,0,0,2037,Omnivore,Rusticus ,Invasive,25,2,0,0,2041,Omnivore,Rusticus ,Invasive,25,2,0,0,2045,Omnivore,Rusticus ,Invasive,25,2,0,0,2049,Omnivore,Rusticus ,Invasive,25,2,0,0,2053,Omnivore,Rusticus ,Invasive,25,2,0,0,2057,Omnivore,Rusticus ,Invasive,25,2,0,0,2063,Omnivore,Rusticus ,Invasive,25,2,0,0,201,Omnivore,Rusticus ,Invasive,11,3,22,22,05,Omnivore,Rusticus ,Invasive,11,3,5,5,179,Omnivore,Rusticus ,Invasive,11,3,1,1,2113,Omnivore,Rusticus ,Invasive,11,3,0,0,2217,Omnivore,Rusticus ,Invasive,11,3,0,0,2221,Omnivore,Rusticus ,Invasive,11,3,0,0,2225,Omnivore,Rusticus ,Invasive,11,3,0,0,2229,Omnivore,Rusticus ,Invasive,11,3,0,0,2233,Omnivore,Rusticus ,Invasive,11,3,0,0,2237,Omnivore,Rusticus ,Invasive,11,3,0,0,2241,Omnivore,Rusticus ,Invasive,11,3,0,0,2245,Omnivore,Rusticus ,Invasive,11,3,0,0,2249,Omnivore,Rusticus ,Invasive,11,3,0,0,2253,Omnivore,Rusticus ,Invasive,11,3,0,0,2257,Omnivore,Rusticus ,Invasive,11,3,1,1,2163,Omnivore,Rusticus ,Invasive,11,3,0,0,221,Omnivore,Rusticus ,Invasive,14,4,29,29,05,Omnivore,Rusticus ,Invasive,14,4,9,9,209,Omnivore,Rusticus ,Invasive,14,4,3,3,2613,Omnivore,Rusticus ,Invasive,14,4,1,1,2817,Omnivore,Rusticus ,Invasive,14,4,0,0,2921,Omnivore,Rusticus ,Invasive,14,4,0,0,2925,Omnivore,Rusticus ,Invasive,14,4,0,0,2929,Omnivore,Rusticus ,Invasive,14,4,0,0,2933,Omnivore,Rusticus ,Invasive,14,4,0,0,2937,Omnivore,Rusticus ,Invasive,14,4,0,0,2941,Omnivore,Rusticus ,Invasive,14,4,0,0,2945,Omnivore,Rusticus ,Invasive,14,4,0,0,2949,Omnivore,Rusticus ,Invasive,14,4,0,0,2953,Omnivore,Rusticus ,Invasive,14,4,0,0,2957,Omnivore,Rusticus ,Invasive,14,4,0,0,2963,Omnivore,Rusticus ,Invasive,14,4,0,0,291,Predator,Rusticus ,Invasive,17,1,22,22,05,Predator,Rusticus ,Invasive,17,1,7,7,159,Predator,Rusticus ,Invasive,17,1,4,4,1813,Predator,Rusticus ,Invasive,17,1,1,1,2117,Predator,Rusticus ,Invasive,17,1,0,0,2221,Predator,Rusticus ,Invasive,17,1,0,0,2225,Predator,Rusticus ,Invasive,17,1,0,0,2229,Predator,Rusticus ,Invasive,17,1,0,0,2233,Predator,Rusticus ,Invasive,17,1,0,0,2237,Predator,Rusticus ,Invasive,17,1,0,0,2241,Predator,Rusticus ,Invasive,17,1,0,0,2245,Predator,Rusticus ,Invasive,17,1,0,0,2249,Predator,Rusticus ,Invasive,17,1,0,0,2253,Predator,Rusticus ,Invasive,17,1,0,0,2257,Predator,Rusticus ,Invasive,17,1,0,0,2263,Predator,Rusticus ,Invasive,17,1,0,0,221,Predator,Rusticus ,Invasive,24,2,21,21,05,Predator,Rusticus ,Invasive,24,2,9,9,129,Predator,Rusticus ,Invasive,24,2,6,6,1513,Predator,Rusticus ,Invasive,24,2,2,2,1917,Predator,Rusticus ,Invasive,24,2,2,2,1921,Predator,Rusticus ,Invasive,24,2,0,0,2125,Predator,Rusticus ,Invasive,24,2,2,2,1929,Predator,Rusticus ,Invasive,24,2,0,0,2133,Predator,Rusticus ,Invasive,24,2,2,2,1937,Predator,Rusticus ,Invasive,24,2,1,1,2041,Predator,Rusticus ,Invasive,24,2,0,0,2145,Predator,Rusticus ,Invasive,24,2,0,0,2149,Predator,Rusticus ,Invasive,24,2,0,0,2153,Predator,Rusticus ,Invasive,24,2,1,1,2057,Predator,Rusticus ,Invasive,24,2,0,0,2163,Predator,Rusticus ,Invasive,24,2,0,0,211,Predator,Rusticus ,Invasive,40,3,21,21,05,Predator,Rusticus ,Invasive,40,3,3,3,189,Predator,Rusticus ,Invasive,40,3,2,2,1913,Predator,Rusticus ,Invasive,40,3,1,1,2017,Predator,Rusticus ,Invasive,40,3,1,1,2021,Predator,Rusticus ,Invasive,40,3,0,0,2125,Predator,Rusticus ,Invasive,40,3,0,0,2129,Predator,Rusticus ,Invasive,40,3,0,0,2133,Predator,Rusticus ,Invasive,40,3,0,0,2137,Predator,Rusticus ,Invasive,40,3,0,0,2141,Predator,Rusticus ,Invasive,40,3,0,0,2145,Predator,Rusticus ,Invasive,40,3,0,0,2149,Predator,Rusticus ,Invasive,40,3,0,0,2153,Predator,Rusticus ,Invasive,40,3,0,0,2157,Predator,Rusticus ,Invasive,40,3,0,0,2163,Predator,Rusticus ,Invasive,40,3,0,0,211,Omnivore,Virilis ,Native,20,1,16,16,05,Omnivore,Virilis ,Native,20,1,6,6,109,Omnivore,Virilis ,Native,20,1,3,3,1313,Omnivore,Virilis ,Native,20,1,2,2,1417,Omnivore,Virilis ,Native,20,1,0,0,1621,Omnivore,Virilis ,Native,20,1,1,1,1525,Omnivore,Virilis ,Native,20,1,1,1,1529,Omnivore,Virilis ,Native,20,1,0,0,1633,Omnivore,Virilis ,Native,20,1,0,0,1637,Omnivore,Virilis ,Native,20,1,0,0,1641,Omnivore,Virilis ,Native,20,1,0,0,1645,Omnivore,Virilis ,Native,20,1,0,0,1649,Omnivore,Virilis ,Native,20,1,0,0,1653,Omnivore,Virilis ,Native,20,1,0,0,1657,Omnivore,Virilis ,Native,20,1,0,0,1663,Omnivore,Virilis ,Native,20,1,0,0,161,Omnivore,Virilis ,Native,13,2,19,19,05,Omnivore,Virilis ,Native,13,2,15,15,49,Omnivore,Virilis ,Native,13,2,9,9,1013,Omnivore,Virilis ,Native,13,2,3,3,1617,Omnivore,Virilis ,Native,13,2,3,3,1621,Omnivore,Virilis ,Native,13,2,1,1,1825,Omnivore,Virilis ,Native,13,2,0,0,1929,Omnivore,Virilis ,Native,13,2,0,0,1933,Omnivore,Virilis ,Native,13,2,0,0,1937,Omnivore,Virilis ,Native,13,2,0,0,1941,Omnivore,Virilis ,Native,13,2,0,0,1945,Omnivore,Virilis ,Native,13,2,0,0,1949,Omnivore,Virilis ,Native,13,2,0,0,1953,Omnivore,Virilis ,Native,13,2,0,0,1957,Omnivore,Virilis ,Native,13,2,0,0,1963,Omnivore,Virilis ,Native,13,2,0,0,191,Omnivore,Virilis ,Native,4,3,18,18,05,Omnivore,Virilis ,Native,4,3,4,4,149,Omnivore,Virilis ,Native,4,3,6,6,1213,Omnivore,Virilis ,Native,4,3,2,2,1617,Omnivore,Virilis ,Native,4,3,1,1,1721,Omnivore,Virilis ,Native,4,3,1,1,1725,Omnivore,Virilis ,Native,4,3,1,1,1729,Omnivore,Virilis ,Native,4,3,1,1,1733,Omnivore,Virilis ,Native,4,3,0,0,1837,Omnivore,Virilis ,Native,4,3,0,0,1841,Omnivore,Virilis ,Native,4,3,0,0,1845,Omnivore,Virilis ,Native,4,3,6,6,1249,Omnivore,Virilis ,Native,4,3,0,0,1853,Omnivore,Virilis ,Native,4,3,0,0,1857,Omnivore,Virilis ,Native,4,3,0,0,1863,Omnivore,Virilis ,Native,4,3,0,0,181,Omnivore,Virilis ,Native,38,4,28,28,05,Omnivore,Virilis ,Native,38,4,5,5,239,Omnivore,Virilis ,Native,38,4,4,4,2413,Omnivore,Virilis ,Native,38,4,1,1,2717,Omnivore,Virilis ,Native,38,4,0,0,2821,Omnivore,Virilis ,Native,38,4,0,0,2825,Omnivore,Virilis ,Native,38,4,0,0,2829,Omnivore,Virilis ,Native,38,4,0,0,2833,Omnivore,Virilis ,Native,38,4,1,1,2737,Omnivore,Virilis ,Native,38,4,0,0,2841,Omnivore,Virilis ,Native,38,4,0,0,2845,Omnivore,Virilis ,Native,38,4,1,1,2749,Omnivore,Virilis ,Native,38,4,0,0,2853,Omnivore,Virilis ,Native,38,4,0,0,2857,Omnivore,Virilis ,Native,38,4,7,7,2163,Omnivore,Virilis ,Native,38,4,0,0,281,Predator,Virilis ,Native,27,1,16,16,05,Predator,Virilis ,Native,27,1,15,15,19,Predator,Virilis ,Native,27,1,18,18,-213,Predator,Virilis ,Native,27,1,6,6,1017,Predator,Virilis ,Native,27,1,0,0,1621,Predator,Virilis ,Native,27,1,2,2,1425,Predator,Virilis ,Native,27,1,1,1,1529,Predator,Virilis ,Native,27,1,0,0,1633,Predator,Virilis ,Native,27,1,0,0,1637,Predator,Virilis ,Native,27,1,0,0,1641,Predator,Virilis ,Native,27,1,0,0,1645,Predator,Virilis ,Native,27,1,1,1,1549,Predator,Virilis ,Native,27,1,0,0,1653,Predator,Virilis ,Native,27,1,0,0,1657,Predator,Virilis ,Native,27,1,0,0,1663,Predator,Virilis ,Native,27,1,1,1,151,Predator,Virilis ,Native,5,2,35,35,05,Predator,Virilis ,Native,5,2,38,38,-39,Predator,Virilis ,Native,5,2,19,19,1613,Predator,Virilis ,Native,5,2,12,12,2317,Predator,Virilis ,Native,5,2,7,7,2821,Predator,Virilis ,Native,5,2,3,3,3225,Predator,Virilis ,Native,5,2,0,0,3529,Predator,Virilis ,Native,5,2,0,0,3533,Predator,Virilis ,Native,5,2,0,0,3537,Predator,Virilis ,Native,5,2,0,0,3541,Predator,Virilis ,Native,5,2,0,0,3545,Predator,Virilis ,Native,5,2,0,0,3549,Predator,Virilis ,Native,5,2,0,0,3553,Predator,Virilis ,Native,5,2,0,0,3557,Predator,Virilis ,Native,5,2,0,0,3563,Predator,Virilis ,Native,5,2,0,0,351,Predator,Virilis ,Native,21,3,32,32,05,Predator,Virilis ,Native,21,3,17,17,159,Predator,Virilis ,Native,21,3,6,6,2613,Predator,Virilis ,Native,21,3,1,1,3117,Predator,Virilis ,Native,21,3,0,0,3221,Predator,Virilis ,Native,21,3,0,0,3225,Predator,Virilis ,Native,21,3,10,10,2229,Predator,Virilis ,Native,21,3,1,1,3133,Predator,Virilis ,Native,21,3,0,0,3237,Predator,Virilis ,Native,21,3,0,0,3241,Predator,Virilis ,Native,21,3,0,0,3245,Predator,Virilis ,Native,21,3,1,1,3149,Predator,Virilis ,Native,21,3,0,0,3253,Predator,Virilis ,Native,21,3,0,0,3257,Predator,Virilis ,Native,21,3,0,0,3263,Predator,Virilis ,Native,21,3,1,1,311,Predator,Virilis ,Native,3,4,27,27,05,Predator,Virilis ,Native,3,4,28,28,-19,Predator,Virilis ,Native,3,4,16,16,1113,Predator,Virilis ,Native,3,4,4,4,2317,Predator,Virilis ,Native,3,4,1,1,2621,Predator,Virilis ,Native,3,4,1,1,2625,Predator,Virilis ,Native,3,4,0,0,2729,Predator,Virilis ,Native,3,4,0,0,2733,Predator,Virilis ,Native,3,4,0,0,2737,Predator,Virilis ,Native,3,4,1,1,2641,Predator,Virilis ,Native,3,4,0,0,2745,Predator,Virilis ,Native,3,4,6,6,2149,Predator,Virilis ,Native,3,4,0,0,2753,Predator,Virilis ,Native,3,4,0,0,2757,Predator,Virilis ,Native,3,4,0,0,2763,Predator,Virilis ,Native,3,4,0,0,27
+Day,Trophic,Species,Origin,Mesocosm,Replicate,Density,Alive ,Consumed
+1,Snail,Snail,NA,2,1,22,22,0
+5,Snail,Snail,NA,2,1,21,21,1
+9,Snail,Snail,NA,2,1,8,8,14
+13,Snail,Snail,NA,2,1,9,9,13
+17,Snail,Snail,NA,2,1,7,7,15
+21,Snail,Snail,NA,2,1,11,11,11
+25,Snail,Snail,NA,2,1,1,1,21
+29,Snail,Snail,NA,2,1,4,4,18
+33,Snail,Snail,NA,2,1,3,3,19
+37,Snail,Snail,NA,2,1,8,8,14
+41,Snail,Snail,NA,2,1,8,8,14
+45,Snail,Snail,NA,2,1,6,6,16
+49,Snail,Snail,NA,2,1,4,4,18
+53,Snail,Snail,NA,2,1,2,2,20
+57,Snail,Snail,NA,2,1,7,7,15
+63,Snail,Snail,NA,2,1,5,5,17
+1,Snail,Snail,NA,15,2,22,22,0
+5,Snail,Snail,NA,15,2,27,27,-5
+9,Snail,Snail,NA,15,2,18,18,4
+13,Snail,Snail,NA,15,2,12,12,10
+17,Snail,Snail,NA,15,2,7,7,15
+21,Snail,Snail,NA,15,2,5,5,17
+25,Snail,Snail,NA,15,2,5,5,17
+29,Snail,Snail,NA,15,2,3,3,19
+33,Snail,Snail,NA,15,2,3,3,19
+37,Snail,Snail,NA,15,2,4,4,18
+41,Snail,Snail,NA,15,2,2,2,20
+45,Snail,Snail,NA,15,2,5,5,17
+49,Snail,Snail,NA,15,2,2,2,20
+53,Snail,Snail,NA,15,2,3,3,19
+57,Snail,Snail,NA,15,2,7,7,15
+63,Snail,Snail,NA,15,2,3,3,19
+1,Snail,Snail,NA,37,3,15,15,0
+5,Snail,Snail,NA,37,3,26,26,-11
+9,Snail,Snail,NA,37,3,11,11,4
+13,Snail,Snail,NA,37,3,10,10,5
+17,Snail,Snail,NA,37,3,3,3,12
+21,Snail,Snail,NA,37,3,5,5,10
+25,Snail,Snail,NA,37,3,6,6,9
+29,Snail,Snail,NA,37,3,7,7,8
+33,Snail,Snail,NA,37,3,4,4,11
+37,Snail,Snail,NA,37,3,5,5,10
+41,Snail,Snail,NA,37,3,5,5,10
+45,Snail,Snail,NA,37,3,5,5,10
+49,Snail,Snail,NA,37,3,4,4,11
+53,Snail,Snail,NA,37,3,4,4,11
+57,Snail,Snail,NA,37,3,4,4,11
+63,Snail,Snail,NA,37,3,4,4,11
+1,Snail,Snail,NA,8,4,19,19,0
+5,Snail,Snail,NA,8,4,19,19,0
+9,Snail,Snail,NA,8,4,17,17,2
+13,Snail,Snail,NA,8,4,13,13,6
+17,Snail,Snail,NA,8,4,12,12,7
+21,Snail,Snail,NA,8,4,12,12,7
+25,Snail,Snail,NA,8,4,11,11,8
+29,Snail,Snail,NA,8,4,7,7,12
+33,Snail,Snail,NA,8,4,6,6,13
+37,Snail,Snail,NA,8,4,2,2,17
+41,Snail,Snail,NA,8,4,3,3,16
+45,Snail,Snail,NA,8,4,4,4,15
+49,Snail,Snail,NA,8,4,4,4,15
+53,Snail,Snail,NA,8,4,4,4,15
+57,Snail,Snail,NA,8,4,3,3,16
+63,Snail,Snail,NA,8,4,5,5,14
+1,Omnivore,Limosus,Invasive,34,1,25,25,0
+5,Omnivore,Limosus,Invasive,34,1,12,12,13
+9,Omnivore,Limosus,Invasive,34,1,8,8,17
+13,Omnivore,Limosus,Invasive,34,1,6,6,19
+17,Omnivore,Limosus,Invasive,34,1,7,7,18
+21,Omnivore,Limosus,Invasive,34,1,5,5,20
+25,Omnivore,Limosus,Invasive,34,1,4,4,21
+29,Omnivore,Limosus,Invasive,34,1,0,0,25
+33,Omnivore,Limosus,Invasive,34,1,2,2,23
+37,Omnivore,Limosus,Invasive,34,1,2,2,23
+41,Omnivore,Limosus,Invasive,34,1,1,1,24
+45,Omnivore,Limosus,Invasive,34,1,0,0,25
+49,Omnivore,Limosus,Invasive,34,1,1,1,24
+53,Omnivore,Limosus,Invasive,34,1,0,0,25
+57,Omnivore,Limosus,Invasive,34,1,1,1,24
+63,Omnivore,Limosus,Invasive,34,1,0,0,25
+1,Omnivore,Limosus,Invasive,9,2,31,31,0
+5,Omnivore,Limosus,Invasive,9,2,19,19,12
+9,Omnivore,Limosus,Invasive,9,2,10,10,21
+13,Omnivore,Limosus,Invasive,9,2,6,6,25
+17,Omnivore,Limosus,Invasive,9,2,7,7,24
+21,Omnivore,Limosus,Invasive,9,2,6,6,25
+25,Omnivore,Limosus,Invasive,9,2,2,2,29
+29,Omnivore,Limosus,Invasive,9,2,10,10,21
+33,Omnivore,Limosus,Invasive,9,2,4,4,27
+37,Omnivore,Limosus,Invasive,9,2,5,5,26
+41,Omnivore,Limosus,Invasive,9,2,2,2,29
+45,Omnivore,Limosus,Invasive,9,2,3,3,28
+49,Omnivore,Limosus,Invasive,9,2,1,1,30
+53,Omnivore,Limosus,Invasive,9,2,1,1,30
+57,Omnivore,Limosus,Invasive,9,2,3,3,28
+63,Omnivore,Limosus,Invasive,9,2,1,1,30
+1,Omnivore,Limosus,Invasive,7,3,16,16,0
+5,Omnivore,Limosus,Invasive,7,3,24,24,-8
+9,Omnivore,Limosus,Invasive,7,3,20,20,-4
+13,Omnivore,Limosus,Invasive,7,3,17,17,-1
+17,Omnivore,Limosus,Invasive,7,3,12,12,4
+21,Omnivore,Limosus,Invasive,7,3,11,11,5
+25,Omnivore,Limosus,Invasive,7,3,9,9,7
+29,Omnivore,Limosus,Invasive,7,3,2,2,14
+33,Omnivore,Limosus,Invasive,7,3,2,2,14
+37,Omnivore,Limosus,Invasive,7,3,0,0,16
+41,Omnivore,Limosus,Invasive,7,3,1,1,15
+45,Omnivore,Limosus,Invasive,7,3,0,0,16
+49,Omnivore,Limosus,Invasive,7,3,0,0,16
+53,Omnivore,Limosus,Invasive,7,3,0,0,16
+57,Omnivore,Limosus,Invasive,7,3,0,0,16
+63,Omnivore,Limosus,Invasive,7,3,0,0,16
+1,Omnivore,Limosus,Invasive,22,4,18,18,0
+5,Omnivore,Limosus,Invasive,22,4,21,21,-3
+9,Omnivore,Limosus,Invasive,22,4,17,17,1
+13,Omnivore,Limosus,Invasive,22,4,12,12,6
+17,Omnivore,Limosus,Invasive,22,4,14,14,4
+21,Omnivore,Limosus,Invasive,22,4,11,11,7
+25,Omnivore,Limosus,Invasive,22,4,8,8,10
+29,Omnivore,Limosus,Invasive,22,4,6,6,12
+33,Omnivore,Limosus,Invasive,22,4,4,4,14
+37,Omnivore,Limosus,Invasive,22,4,3,3,15
+41,Omnivore,Limosus,Invasive,22,4,7,7,11
+45,Omnivore,Limosus,Invasive,22,4,3,3,15
+49,Omnivore,Limosus,Invasive,22,4,1,1,17
+53,Omnivore,Limosus,Invasive,22,4,5,5,13
+57,Omnivore,Limosus,Invasive,22,4,3,3,15
+63,Omnivore,Limosus,Invasive,22,4,6,6,12
+1,Predator,Limosus,Invasive,28,1,25,25,0
+5,Predator,Limosus,Invasive,28,1,22,22,3
+9,Predator,Limosus,Invasive,28,1,11,11,14
+13,Predator,Limosus,Invasive,28,1,8,8,17
+17,Predator,Limosus,Invasive,28,1,4,4,21
+21,Predator,Limosus,Invasive,28,1,1,1,24
+25,Predator,Limosus,Invasive,28,1,1,1,24
+29,Predator,Limosus,Invasive,28,1,1,1,24
+33,Predator,Limosus,Invasive,28,1,1,1,24
+37,Predator,Limosus,Invasive,28,1,0,0,25
+41,Predator,Limosus,Invasive,28,1,1,1,24
+45,Predator,Limosus,Invasive,28,1,0,0,25
+49,Predator,Limosus,Invasive,28,1,0,0,25
+53,Predator,Limosus,Invasive,28,1,0,0,25
+57,Predator,Limosus,Invasive,28,1,0,0,25
+63,Predator,Limosus,Invasive,28,1,0,0,25
+1,Predator,Limosus,Invasive,36,2,11,11,0
+5,Predator,Limosus,Invasive,36,2,20,20,-9
+9,Predator,Limosus,Invasive,36,2,19,19,-8
+13,Predator,Limosus,Invasive,36,2,15,15,-4
+17,Predator,Limosus,Invasive,36,2,14,14,-3
+21,Predator,Limosus,Invasive,36,2,8,8,3
+25,Predator,Limosus,Invasive,36,2,13,13,-2
+29,Predator,Limosus,Invasive,36,2,6,6,5
+33,Predator,Limosus,Invasive,36,2,7,7,4
+37,Predator,Limosus,Invasive,36,2,9,9,2
+41,Predator,Limosus,Invasive,36,2,2,2,9
+45,Predator,Limosus,Invasive,36,2,2,2,9
+49,Predator,Limosus,Invasive,36,2,2,2,9
+53,Predator,Limosus,Invasive,36,2,4,4,7
+57,Predator,Limosus,Invasive,36,2,0,0,11
+63,Predator,Limosus,Invasive,36,2,0,0,11
+1,Predator,Limosus,Invasive,33,3,24,24,0
+5,Predator,Limosus,Invasive,33,3,18,18,6
+9,Predator,Limosus,Invasive,33,3,19,19,5
+13,Predator,Limosus,Invasive,33,3,22,22,2
+17,Predator,Limosus,Invasive,33,3,9,9,15
+21,Predator,Limosus,Invasive,33,3,4,4,20
+25,Predator,Limosus,Invasive,33,3,6,6,18
+29,Predator,Limosus,Invasive,33,3,5,5,19
+33,Predator,Limosus,Invasive,33,3,1,1,23
+37,Predator,Limosus,Invasive,33,3,6,6,18
+41,Predator,Limosus,Invasive,33,3,7,7,17
+45,Predator,Limosus,Invasive,33,3,1,1,23
+49,Predator,Limosus,Invasive,33,3,0,0,24
+53,Predator,Limosus,Invasive,33,3,1,1,23
+57,Predator,Limosus,Invasive,33,3,2,2,22
+63,Predator,Limosus,Invasive,33,3,0,0,24
+1,Predator,Limosus,Invasive,23,4,33,33,0
+5,Predator,Limosus,Invasive,23,4,37,37,-4
+9,Predator,Limosus,Invasive,23,4,25,25,8
+13,Predator,Limosus,Invasive,23,4,15,15,18
+17,Predator,Limosus,Invasive,23,4,14,14,19
+21,Predator,Limosus,Invasive,23,4,8,8,25
+25,Predator,Limosus,Invasive,23,4,10,10,23
+29,Predator,Limosus,Invasive,23,4,12,12,21
+33,Predator,Limosus,Invasive,23,4,4,4,29
+37,Predator,Limosus,Invasive,23,4,8,8,25
+41,Predator,Limosus,Invasive,23,4,3,3,30
+45,Predator,Limosus,Invasive,23,4,11,11,22
+49,Predator,Limosus,Invasive,23,4,5,5,28
+53,Predator,Limosus,Invasive,23,4,3,3,30
+57,Predator,Limosus,Invasive,23,4,7,7,26
+63,Predator,Limosus,Invasive,23,4,8,8,25
+1,Omnivore,Propinquus,Native,10,1,24,24,0
+5,Omnivore,Propinquus,Native,10,1,14,14,10
+9,Omnivore,Propinquus,Native,10,1,7,7,17
+13,Omnivore,Propinquus,Native,10,1,3,3,21
+17,Omnivore,Propinquus,Native,10,1,1,1,23
+21,Omnivore,Propinquus,Native,10,1,0,0,24
+25,Omnivore,Propinquus,Native,10,1,0,0,24
+29,Omnivore,Propinquus,Native,10,1,0,0,24
+33,Omnivore,Propinquus,Native,10,1,0,0,24
+37,Omnivore,Propinquus,Native,10,1,0,0,24
+41,Omnivore,Propinquus,Native,10,1,0,0,24
+45,Omnivore,Propinquus,Native,10,1,0,0,24
+49,Omnivore,Propinquus,Native,10,1,0,0,24
+53,Omnivore,Propinquus,Native,10,1,0,0,24
+57,Omnivore,Propinquus,Native,10,1,0,0,24
+63,Omnivore,Propinquus,Native,10,1,0,0,24
+1,Omnivore,Propinquus,Native,18,2,25,25,0
+5,Omnivore,Propinquus,Native,18,2,17,17,8
+9,Omnivore,Propinquus,Native,18,2,10,10,15
+13,Omnivore,Propinquus,Native,18,2,3,3,22
+17,Omnivore,Propinquus,Native,18,2,1,1,24
+21,Omnivore,Propinquus,Native,18,2,0,0,25
+25,Omnivore,Propinquus,Native,18,2,0,0,25
+29,Omnivore,Propinquus,Native,18,2,0,0,25
+33,Omnivore,Propinquus,Native,18,2,1,1,24
+37,Omnivore,Propinquus,Native,18,2,0,0,25
+41,Omnivore,Propinquus,Native,18,2,0,0,25
+45,Omnivore,Propinquus,Native,18,2,0,0,25
+49,Omnivore,Propinquus,Native,18,2,0,0,25
+53,Omnivore,Propinquus,Native,18,2,0,0,25
+57,Omnivore,Propinquus,Native,18,2,0,0,25
+63,Omnivore,Propinquus,Native,18,2,0,0,25
+1,Omnivore,Propinquus,Native,16,3,26,26,0
+5,Omnivore,Propinquus,Native,16,3,6,6,20
+9,Omnivore,Propinquus,Native,16,3,2,2,24
+13,Omnivore,Propinquus,Native,16,3,2,2,24
+17,Omnivore,Propinquus,Native,16,3,0,0,26
+21,Omnivore,Propinquus,Native,16,3,1,1,25
+25,Omnivore,Propinquus,Native,16,3,2,2,24
+29,Omnivore,Propinquus,Native,16,3,0,0,26
+33,Omnivore,Propinquus,Native,16,3,0,0,26
+37,Omnivore,Propinquus,Native,16,3,0,0,26
+41,Omnivore,Propinquus,Native,16,3,0,0,26
+45,Omnivore,Propinquus,Native,16,3,0,0,26
+49,Omnivore,Propinquus,Native,16,3,0,0,26
+53,Omnivore,Propinquus,Native,16,3,0,0,26
+57,Omnivore,Propinquus,Native,16,3,0,0,26
+63,Omnivore,Propinquus,Native,16,3,0,0,26
+1,Omnivore,Propinquus,Native,6,4,17,17,0
+5,Omnivore,Propinquus,Native,6,4,15,15,2
+9,Omnivore,Propinquus,Native,6,4,9,9,8
+13,Omnivore,Propinquus,Native,6,4,3,3,14
+17,Omnivore,Propinquus,Native,6,4,2,2,15
+21,Omnivore,Propinquus,Native,6,4,3,3,14
+25,Omnivore,Propinquus,Native,6,4,5,5,12
+29,Omnivore,Propinquus,Native,6,4,3,3,14
+33,Omnivore,Propinquus,Native,6,4,4,4,13
+37,Omnivore,Propinquus,Native,6,4,4,4,13
+41,Omnivore,Propinquus,Native,6,4,2,2,15
+45,Omnivore,Propinquus,Native,6,4,0,0,17
+49,Omnivore,Propinquus,Native,6,4,1,1,16
+53,Omnivore,Propinquus,Native,6,4,1,1,16
+57,Omnivore,Propinquus,Native,6,4,0,0,17
+63,Omnivore,Propinquus,Native,6,4,1,1,16
+1,Predator,Propinquus,Native,31,1,28,28,0
+5,Predator,Propinquus,Native,31,1,21,21,7
+9,Predator,Propinquus,Native,31,1,20,20,8
+13,Predator,Propinquus,Native,31,1,16,16,12
+17,Predator,Propinquus,Native,31,1,10,10,18
+21,Predator,Propinquus,Native,31,1,15,15,13
+25,Predator,Propinquus,Native,31,1,10,10,18
+29,Predator,Propinquus,Native,31,1,10,10,18
+33,Predator,Propinquus,Native,31,1,10,10,18
+37,Predator,Propinquus,Native,31,1,3,3,25
+41,Predator,Propinquus,Native,31,1,9,9,19
+45,Predator,Propinquus,Native,31,1,6,6,22
+49,Predator,Propinquus,Native,31,1,6,6,22
+53,Predator,Propinquus,Native,31,1,7,7,21
+57,Predator,Propinquus,Native,31,1,3,3,25
+63,Predator,Propinquus,Native,31,1,5,5,23
+1,Predator,Propinquus,Native,12,2,26,26,0
+5,Predator,Propinquus,Native,12,2,24,24,2
+9,Predator,Propinquus,Native,12,2,20,20,6
+13,Predator,Propinquus,Native,12,2,12,12,14
+17,Predator,Propinquus,Native,12,2,3,3,23
+21,Predator,Propinquus,Native,12,2,4,4,22
+25,Predator,Propinquus,Native,12,2,4,4,22
+29,Predator,Propinquus,Native,12,2,4,4,22
+33,Predator,Propinquus,Native,12,2,0,0,26
+37,Predator,Propinquus,Native,12,2,1,1,25
+41,Predator,Propinquus,Native,12,2,0,0,26
+45,Predator,Propinquus,Native,12,2,0,0,26
+49,Predator,Propinquus,Native,12,2,0,0,26
+53,Predator,Propinquus,Native,12,2,0,0,26
+57,Predator,Propinquus,Native,12,2,0,0,26
+63,Predator,Propinquus,Native,12,2,0,0,26
+1,Predator,Propinquus,Native,30,3,17,17,0
+5,Predator,Propinquus,Native,30,3,17,17,0
+9,Predator,Propinquus,Native,30,3,19,19,-2
+13,Predator,Propinquus,Native,30,3,7,7,10
+17,Predator,Propinquus,Native,30,3,10,10,7
+21,Predator,Propinquus,Native,30,3,5,5,12
+25,Predator,Propinquus,Native,30,3,6,6,11
+29,Predator,Propinquus,Native,30,3,7,7,10
+33,Predator,Propinquus,Native,30,3,5,5,12
+37,Predator,Propinquus,Native,30,3,3,3,14
+41,Predator,Propinquus,Native,30,3,1,1,16
+45,Predator,Propinquus,Native,30,3,4,4,13
+49,Predator,Propinquus,Native,30,3,1,1,16
+53,Predator,Propinquus,Native,30,3,8,8,9
+57,Predator,Propinquus,Native,30,3,3,3,14
+63,Predator,Propinquus,Native,30,3,5,5,12
+1,Predator,Propinquus,Native,39,4,35,35,0
+5,Predator,Propinquus,Native,39,4,47,47,-12
+9,Predator,Propinquus,Native,39,4,31,31,4
+13,Predator,Propinquus,Native,39,4,25,25,10
+17,Predator,Propinquus,Native,39,4,15,15,20
+21,Predator,Propinquus,Native,39,4,17,17,18
+25,Predator,Propinquus,Native,39,4,2,2,33
+29,Predator,Propinquus,Native,39,4,7,7,28
+33,Predator,Propinquus,Native,39,4,10,10,25
+37,Predator,Propinquus,Native,39,4,10,10,25
+41,Predator,Propinquus,Native,39,4,6,6,29
+45,Predator,Propinquus,Native,39,4,4,4,31
+49,Predator,Propinquus,Native,39,4,5,5,30
+53,Predator,Propinquus,Native,39,4,2,2,33
+57,Predator,Propinquus,Native,39,4,0,0,35
+63,Predator,Propinquus,Native,39,4,4,4,31
+1,Omnivore,Rusticus,Invasive,26,1,17,17,0
+5,Omnivore,Rusticus,Invasive,26,1,4,4,13
+9,Omnivore,Rusticus,Invasive,26,1,5,5,12
+13,Omnivore,Rusticus,Invasive,26,1,4,4,13
+17,Omnivore,Rusticus,Invasive,26,1,0,0,17
+21,Omnivore,Rusticus,Invasive,26,1,0,0,17
+25,Omnivore,Rusticus,Invasive,26,1,0,0,17
+29,Omnivore,Rusticus,Invasive,26,1,3,3,14
+33,Omnivore,Rusticus,Invasive,26,1,0,0,17
+37,Omnivore,Rusticus,Invasive,26,1,0,0,17
+41,Omnivore,Rusticus,Invasive,26,1,0,0,17
+45,Omnivore,Rusticus,Invasive,26,1,0,0,17
+49,Omnivore,Rusticus,Invasive,26,1,0,0,17
+53,Omnivore,Rusticus,Invasive,26,1,1,1,16
+57,Omnivore,Rusticus,Invasive,26,1,1,1,16
+63,Omnivore,Rusticus,Invasive,26,1,1,1,16
+1,Omnivore,Rusticus,Invasive,25,2,20,20,0
+5,Omnivore,Rusticus,Invasive,25,2,10,10,10
+9,Omnivore,Rusticus,Invasive,25,2,6,6,14
+13,Omnivore,Rusticus,Invasive,25,2,1,1,19
+17,Omnivore,Rusticus,Invasive,25,2,1,1,19
+21,Omnivore,Rusticus,Invasive,25,2,2,2,18
+25,Omnivore,Rusticus,Invasive,25,2,0,0,20
+29,Omnivore,Rusticus,Invasive,25,2,0,0,20
+33,Omnivore,Rusticus,Invasive,25,2,0,0,20
+37,Omnivore,Rusticus,Invasive,25,2,0,0,20
+41,Omnivore,Rusticus,Invasive,25,2,0,0,20
+45,Omnivore,Rusticus,Invasive,25,2,0,0,20
+49,Omnivore,Rusticus,Invasive,25,2,0,0,20
+53,Omnivore,Rusticus,Invasive,25,2,0,0,20
+57,Omnivore,Rusticus,Invasive,25,2,0,0,20
+63,Omnivore,Rusticus,Invasive,25,2,0,0,20
+1,Omnivore,Rusticus,Invasive,11,3,22,22,0
+5,Omnivore,Rusticus,Invasive,11,3,5,5,17
+9,Omnivore,Rusticus,Invasive,11,3,1,1,21
+13,Omnivore,Rusticus,Invasive,11,3,0,0,22
+17,Omnivore,Rusticus,Invasive,11,3,0,0,22
+21,Omnivore,Rusticus,Invasive,11,3,0,0,22
+25,Omnivore,Rusticus,Invasive,11,3,0,0,22
+29,Omnivore,Rusticus,Invasive,11,3,0,0,22
+33,Omnivore,Rusticus,Invasive,11,3,0,0,22
+37,Omnivore,Rusticus,Invasive,11,3,0,0,22
+41,Omnivore,Rusticus,Invasive,11,3,0,0,22
+45,Omnivore,Rusticus,Invasive,11,3,0,0,22
+49,Omnivore,Rusticus,Invasive,11,3,0,0,22
+53,Omnivore,Rusticus,Invasive,11,3,0,0,22
+57,Omnivore,Rusticus,Invasive,11,3,1,1,21
+63,Omnivore,Rusticus,Invasive,11,3,0,0,22
+1,Omnivore,Rusticus,Invasive,14,4,29,29,0
+5,Omnivore,Rusticus,Invasive,14,4,9,9,20
+9,Omnivore,Rusticus,Invasive,14,4,3,3,26
+13,Omnivore,Rusticus,Invasive,14,4,1,1,28
+17,Omnivore,Rusticus,Invasive,14,4,0,0,29
+21,Omnivore,Rusticus,Invasive,14,4,0,0,29
+25,Omnivore,Rusticus,Invasive,14,4,0,0,29
+29,Omnivore,Rusticus,Invasive,14,4,0,0,29
+33,Omnivore,Rusticus,Invasive,14,4,0,0,29
+37,Omnivore,Rusticus,Invasive,14,4,0,0,29
+41,Omnivore,Rusticus,Invasive,14,4,0,0,29
+45,Omnivore,Rusticus,Invasive,14,4,0,0,29
+49,Omnivore,Rusticus,Invasive,14,4,0,0,29
+53,Omnivore,Rusticus,Invasive,14,4,0,0,29
+57,Omnivore,Rusticus,Invasive,14,4,0,0,29
+63,Omnivore,Rusticus,Invasive,14,4,0,0,29
+1,Predator,Rusticus,Invasive,17,1,22,22,0
+5,Predator,Rusticus,Invasive,17,1,7,7,15
+9,Predator,Rusticus,Invasive,17,1,4,4,18
+13,Predator,Rusticus,Invasive,17,1,1,1,21
+17,Predator,Rusticus,Invasive,17,1,0,0,22
+21,Predator,Rusticus,Invasive,17,1,0,0,22
+25,Predator,Rusticus,Invasive,17,1,0,0,22
+29,Predator,Rusticus,Invasive,17,1,0,0,22
+33,Predator,Rusticus,Invasive,17,1,0,0,22
+37,Predator,Rusticus,Invasive,17,1,0,0,22
+41,Predator,Rusticus,Invasive,17,1,0,0,22
+45,Predator,Rusticus,Invasive,17,1,0,0,22
+49,Predator,Rusticus,Invasive,17,1,0,0,22
+53,Predator,Rusticus,Invasive,17,1,0,0,22
+57,Predator,Rusticus,Invasive,17,1,0,0,22
+63,Predator,Rusticus,Invasive,17,1,0,0,22
+1,Predator,Rusticus,Invasive,24,2,21,21,0
+5,Predator,Rusticus,Invasive,24,2,9,9,12
+9,Predator,Rusticus,Invasive,24,2,6,6,15
+13,Predator,Rusticus,Invasive,24,2,2,2,19
+17,Predator,Rusticus,Invasive,24,2,2,2,19
+21,Predator,Rusticus,Invasive,24,2,0,0,21
+25,Predator,Rusticus,Invasive,24,2,2,2,19
+29,Predator,Rusticus,Invasive,24,2,0,0,21
+33,Predator,Rusticus,Invasive,24,2,2,2,19
+37,Predator,Rusticus,Invasive,24,2,1,1,20
+41,Predator,Rusticus,Invasive,24,2,0,0,21
+45,Predator,Rusticus,Invasive,24,2,0,0,21
+49,Predator,Rusticus,Invasive,24,2,0,0,21
+53,Predator,Rusticus,Invasive,24,2,1,1,20
+57,Predator,Rusticus,Invasive,24,2,0,0,21
+63,Predator,Rusticus,Invasive,24,2,0,0,21
+1,Predator,Rusticus,Invasive,40,3,21,21,0
+5,Predator,Rusticus,Invasive,40,3,3,3,18
+9,Predator,Rusticus,Invasive,40,3,2,2,19
+13,Predator,Rusticus,Invasive,40,3,1,1,20
+17,Predator,Rusticus,Invasive,40,3,1,1,20
+21,Predator,Rusticus,Invasive,40,3,0,0,21
+25,Predator,Rusticus,Invasive,40,3,0,0,21
+29,Predator,Rusticus,Invasive,40,3,0,0,21
+33,Predator,Rusticus,Invasive,40,3,0,0,21
+37,Predator,Rusticus,Invasive,40,3,0,0,21
+41,Predator,Rusticus,Invasive,40,3,0,0,21
+45,Predator,Rusticus,Invasive,40,3,0,0,21
+49,Predator,Rusticus,Invasive,40,3,0,0,21
+53,Predator,Rusticus,Invasive,40,3,0,0,21
+57,Predator,Rusticus,Invasive,40,3,0,0,21
+63,Predator,Rusticus,Invasive,40,3,0,0,21
+1,Omnivore,Virilis,Native,20,1,16,16,0
+5,Omnivore,Virilis,Native,20,1,6,6,10
+9,Omnivore,Virilis,Native,20,1,3,3,13
+13,Omnivore,Virilis,Native,20,1,2,2,14
+17,Omnivore,Virilis,Native,20,1,0,0,16
+21,Omnivore,Virilis,Native,20,1,1,1,15
+25,Omnivore,Virilis,Native,20,1,1,1,15
+29,Omnivore,Virilis,Native,20,1,0,0,16
+33,Omnivore,Virilis,Native,20,1,0,0,16
+37,Omnivore,Virilis,Native,20,1,0,0,16
+41,Omnivore,Virilis,Native,20,1,0,0,16
+45,Omnivore,Virilis,Native,20,1,0,0,16
+49,Omnivore,Virilis,Native,20,1,0,0,16
+53,Omnivore,Virilis,Native,20,1,0,0,16
+57,Omnivore,Virilis,Native,20,1,0,0,16
+63,Omnivore,Virilis,Native,20,1,0,0,16
+1,Omnivore,Virilis,Native,13,2,19,19,0
+5,Omnivore,Virilis,Native,13,2,15,15,4
+9,Omnivore,Virilis,Native,13,2,9,9,10
+13,Omnivore,Virilis,Native,13,2,3,3,16
+17,Omnivore,Virilis,Native,13,2,3,3,16
+21,Omnivore,Virilis,Native,13,2,1,1,18
+25,Omnivore,Virilis,Native,13,2,0,0,19
+29,Omnivore,Virilis,Native,13,2,0,0,19
+33,Omnivore,Virilis,Native,13,2,0,0,19
+37,Omnivore,Virilis,Native,13,2,0,0,19
+41,Omnivore,Virilis,Native,13,2,0,0,19
+45,Omnivore,Virilis,Native,13,2,0,0,19
+49,Omnivore,Virilis,Native,13,2,0,0,19
+53,Omnivore,Virilis,Native,13,2,0,0,19
+57,Omnivore,Virilis,Native,13,2,0,0,19
+63,Omnivore,Virilis,Native,13,2,0,0,19
+1,Omnivore,Virilis,Native,4,3,18,18,0
+5,Omnivore,Virilis,Native,4,3,4,4,14
+9,Omnivore,Virilis,Native,4,3,6,6,12
+13,Omnivore,Virilis,Native,4,3,2,2,16
+17,Omnivore,Virilis,Native,4,3,1,1,17
+21,Omnivore,Virilis,Native,4,3,1,1,17
+25,Omnivore,Virilis,Native,4,3,1,1,17
+29,Omnivore,Virilis,Native,4,3,1,1,17
+33,Omnivore,Virilis,Native,4,3,0,0,18
+37,Omnivore,Virilis,Native,4,3,0,0,18
+41,Omnivore,Virilis,Native,4,3,0,0,18
+45,Omnivore,Virilis,Native,4,3,6,6,12
+49,Omnivore,Virilis,Native,4,3,0,0,18
+53,Omnivore,Virilis,Native,4,3,0,0,18
+57,Omnivore,Virilis,Native,4,3,0,0,18
+63,Omnivore,Virilis,Native,4,3,0,0,18
+1,Omnivore,Virilis,Native,38,4,28,28,0
+5,Omnivore,Virilis,Native,38,4,5,5,23
+9,Omnivore,Virilis,Native,38,4,4,4,24
+13,Omnivore,Virilis,Native,38,4,1,1,27
+17,Omnivore,Virilis,Native,38,4,0,0,28
+21,Omnivore,Virilis,Native,38,4,0,0,28
+25,Omnivore,Virilis,Native,38,4,0,0,28
+29,Omnivore,Virilis,Native,38,4,0,0,28
+33,Omnivore,Virilis,Native,38,4,1,1,27
+37,Omnivore,Virilis,Native,38,4,0,0,28
+41,Omnivore,Virilis,Native,38,4,0,0,28
+45,Omnivore,Virilis,Native,38,4,1,1,27
+49,Omnivore,Virilis,Native,38,4,0,0,28
+53,Omnivore,Virilis,Native,38,4,0,0,28
+57,Omnivore,Virilis,Native,38,4,7,7,21
+63,Omnivore,Virilis,Native,38,4,0,0,28
+1,Predator,Virilis,Native,27,1,16,16,0
+5,Predator,Virilis,Native,27,1,15,15,1
+9,Predator,Virilis,Native,27,1,18,18,-2
+13,Predator,Virilis,Native,27,1,6,6,10
+17,Predator,Virilis,Native,27,1,0,0,16
+21,Predator,Virilis,Native,27,1,2,2,14
+25,Predator,Virilis,Native,27,1,1,1,15
+29,Predator,Virilis,Native,27,1,0,0,16
+33,Predator,Virilis,Native,27,1,0,0,16
+37,Predator,Virilis,Native,27,1,0,0,16
+41,Predator,Virilis,Native,27,1,0,0,16
+45,Predator,Virilis,Native,27,1,1,1,15
+49,Predator,Virilis,Native,27,1,0,0,16
+53,Predator,Virilis,Native,27,1,0,0,16
+57,Predator,Virilis,Native,27,1,0,0,16
+63,Predator,Virilis,Native,27,1,1,1,15
+1,Predator,Virilis,Native,5,2,35,35,0
+5,Predator,Virilis,Native,5,2,38,38,-3
+9,Predator,Virilis,Native,5,2,19,19,16
+13,Predator,Virilis,Native,5,2,12,12,23
+17,Predator,Virilis,Native,5,2,7,7,28
+21,Predator,Virilis,Native,5,2,3,3,32
+25,Predator,Virilis,Native,5,2,0,0,35
+29,Predator,Virilis,Native,5,2,0,0,35
+33,Predator,Virilis,Native,5,2,0,0,35
+37,Predator,Virilis,Native,5,2,0,0,35
+41,Predator,Virilis,Native,5,2,0,0,35
+45,Predator,Virilis,Native,5,2,0,0,35
+49,Predator,Virilis,Native,5,2,0,0,35
+53,Predator,Virilis,Native,5,2,0,0,35
+57,Predator,Virilis,Native,5,2,0,0,35
+63,Predator,Virilis,Native,5,2,0,0,35
+1,Predator,Virilis,Native,21,3,32,32,0
+5,Predator,Virilis,Native,21,3,17,17,15
+9,Predator,Virilis,Native,21,3,6,6,26
+13,Predator,Virilis,Native,21,3,1,1,31
+17,Predator,Virilis,Native,21,3,0,0,32
+21,Predator,Virilis,Native,21,3,0,0,32
+25,Predator,Virilis,Native,21,3,10,10,22
+29,Predator,Virilis,Native,21,3,1,1,31
+33,Predator,Virilis,Native,21,3,0,0,32
+37,Predator,Virilis,Native,21,3,0,0,32
+41,Predator,Virilis,Native,21,3,0,0,32
+45,Predator,Virilis,Native,21,3,1,1,31
+49,Predator,Virilis,Native,21,3,0,0,32
+53,Predator,Virilis,Native,21,3,0,0,32
+57,Predator,Virilis,Native,21,3,0,0,32
+63,Predator,Virilis,Native,21,3,1,1,31
+1,Predator,Virilis,Native,3,4,27,27,0
+5,Predator,Virilis,Native,3,4,28,28,-1
+9,Predator,Virilis,Native,3,4,16,16,11
+13,Predator,Virilis,Native,3,4,4,4,23
+17,Predator,Virilis,Native,3,4,1,1,26
+21,Predator,Virilis,Native,3,4,1,1,26
+25,Predator,Virilis,Native,3,4,0,0,27
+29,Predator,Virilis,Native,3,4,0,0,27
+33,Predator,Virilis,Native,3,4,0,0,27
+37,Predator,Virilis,Native,3,4,1,1,26
+41,Predator,Virilis,Native,3,4,0,0,27
+45,Predator,Virilis,Native,3,4,6,6,21
+49,Predator,Virilis,Native,3,4,0,0,27
+53,Predator,Virilis,Native,3,4,0,0,27
+57,Predator,Virilis,Native,3,4,0,0,27
+63,Predator,Virilis,Native,3,4,0,0,27
