@@ -2,6 +2,10 @@
 library(RCurl)
 library(ggplot2)
 library(plyr)
+library(magrittr)
+library(dplyr)
+library(cowplot)
+
 
 ####Snail analyses####
 #read in snail data from GitHub
@@ -11,9 +15,8 @@ snail<-read.csv(text=snail.URL)
 #convert negatives to zeroes in Snail$Consumed 
 snail$Consumed[snail$Consumed<0]<- 0
 
-#pull out only crayfish treatments and order factors
-snail.subset<-snail[snail$Species%in%c("Limosus", "Propinquus","Rusticus ","Virilis "),]
-snail.subset$Species<- factor(snail.subset$Species, levels=c("Limosus","Rusticus ", "Propinquus", "Virilis "))
+#pull out only snail and crayfish treatments and order factors
+snail.subset<-snail[snail$Species%in%c("Limosus", "Propinquus","Rusticus","Virilis", "Snail"),]
 
 #remove day 49 is missing a value for mesocosm 36
 snail.subset<-snail.subset[snail.subset$Day!=49,]
@@ -25,13 +28,29 @@ snail.subset.mean<-ddply(.data=snail.subset, .variables=.(Day, Trophic, Species,
 snail.subset.mean.day<-ddply(.data=snail.subset, .variables=.(Trophic, Species, Origin, Replicate), .fun= summarise, Mean = mean(Density))
 
 #plot Figure S1 
-Figure.S1<-ggplot(snail.subset.mean, aes(x = Day, y = Mean))+geom_point()+facet_grid(Trophic~Species)+
+Figure.S1<-ggplot(snail.subset.mean, aes(x = Day, y = Mean))+
+  geom_point()+
+  facet_grid(Trophic~Species)+
   stat_smooth(se=F, colour="black", size=1)+
-  theme_minimal()
+  theme_classic()+
+  theme(panel.border=element_rect(colour="black",fill=NA))+
+  theme(strip.background = element_blank())
 
 
 #calculate LD75 for each species and treatment 
 library(MASS)
+
+#snail
+Snail.snail<-snail.subset[snail.subset$Species=="Snail",] 
+attach(Snail.snail)
+model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
+
+Snail.snail.model.outputs<-ddply(Snail.snail, "Replicate", function(x){
+  model.output <- model(x)
+  df.out <- dose.p(model.output,p=0.25)
+  return(df.out)
+})  
+
 
 #Limosus, Omnivore 
 LO.snail<-snail.subset[snail.subset$Species=="Limosus" & snail.subset$Trophic %in% "Omnivore",] 
@@ -58,7 +77,7 @@ LP.snail.model.outputs<-ddply(LP.snail, "Replicate", function(x){
 
 
 #Rusticus, Omnivore 
-RO.snail<-snail.subset[snail.subset$Species=="Rusticus " & snail.subset$Trophic %in% "Omnivore",] 
+RO.snail<-snail.subset[snail.subset$Species=="Rusticus" & snail.subset$Trophic %in% "Omnivore",] 
 attach(RO.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -70,7 +89,7 @@ RO.snail.model.outputs<-ddply(RO.snail, "Replicate", function(x){
 
 
 #Rusticus, Predator 
-RP.snail<-snail.subset[snail.subset$Species=="Rusticus " & snail.subset$Trophic %in% "Predator",] 
+RP.snail<-snail.subset[snail.subset$Species=="Rusticus" & snail.subset$Trophic %in% "Predator",] 
 attach(RP.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -106,7 +125,7 @@ PP.snail.model.outputs<-ddply(PP.snail, "Replicate", function(x){
 
 
 #Virilis, Omnivore
-VO.snail<-snail.subset[snail.subset$Species=="Virilis " & snail.subset$Trophic %in% "Omnivore",] 
+VO.snail<-snail.subset[snail.subset$Species=="Virilis" & snail.subset$Trophic %in% "Omnivore",] 
 attach(VO.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -118,7 +137,7 @@ VO.snail.model.outputs<-ddply(VO.snail, "Replicate", function(x){
 
 
 #Virilis, Predator
-VP.snail<-snail.subset[snail.subset$Species=="Virilis " & snail.subset$Trophic %in% "Predator",] 
+VP.snail<-snail.subset[snail.subset$Species=="Virilis" & snail.subset$Trophic %in% "Predator",] 
 attach(VP.snail)
 model <- function(df){glm(cbind(Alive,Consumed)~Day, family=binomial, data = df)} 
 
@@ -129,156 +148,140 @@ VP.snail.model.outputs<-ddply(VP.snail, "Replicate", function(x){
 }) 
 
 
-LD75.model.output <- rbind(LO.snail.model.outputs,RO.snail.model.outputs, PO.snail.model.outputs, VO.snail.model.outputs,
-                           LP.snail.model.outputs, RP.snail.model.outputs, PP.snail.model.outputs, VP.snail.model.outputs)
+LD75.model.output <- rbind(LO.snail.model.outputs,PO.snail.model.outputs, RO.snail.model.outputs, VO.snail.model.outputs,
+                           LP.snail.model.outputs, PP.snail.model.outputs, RP.snail.model.outputs, VP.snail.model.outputs, Snail.snail.model.outputs)
 
 LD75.model.output$Species<-snail.subset.mean.day$Species
 LD75.model.output$Trophic<-snail.subset.mean.day$Trophic
 LD75.model.output$Origin<-snail.subset.mean.day$Origin
 colnames(LD75.model.output)[2] <- "LD75"
 
+#order factors
+LD75.model.output$Species<- factor(LD75.model.output$Species, levels=c("Limosus","Rusticus", "Propinquus", "Virilis","Snail"))
 
-LD75.model.output.mean<-ddply(.data=LD75.model.output, .variables=.(Species, Trophic, Origin), .fun= summarise, Mean = mean(LD75), SE=sd(LD75)/sqrt(length(LD75)))
 
-#plot Figure 2
-Figure.2<-ggplot(LD75.model.output.mean, aes(x = Species, y = Mean, fill=Trophic))+
-  geom_bar(stat = "identity",position="dodge")+xlab("Species")+ylab("Day when 75% of snails consumed")+
-  scale_fill_manual(values=c("black", "grey"))+
-  geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))+
-  theme_minimal()
+#plot Figure 2A
+Figure.2A<-ggplot(LD75.model.output, aes(x = Species, y =LD75))+
+  geom_boxplot(aes(colour = Trophic))+
+  xlab("Species")+
+  ylab("Day when 75% mortality observed (LD75)")+
+  scale_colour_manual(values=c("Black", "Dark Grey", "Red"))+
+  theme_classic()+theme(panel.border=element_rect(colour="black",fill=NA))+
+  theme(strip.background = element_blank())
 
 #run two-way ANOVA and TukeyHSD to determine differences between Species
-ANOVA1<-aov(LD75~Trophic*Origin, data=LD75.model.output)
-
-#run two-way ANOVA and TukeyHSD to determine differences between Species
-ANOVA2<-aov(LD75~Species*Trophic, data=LD75.model.output)
-TukeyANOVA2<-TukeyHSD(ANOVA2)
+ANOVA.LD75<-aov(LD75~Species*Trophic, data=LD75.model.output)
+TukeyANOVA.LD75<-TukeyHSD(ANOVA.LD75)
 
 #Table S1
-Table.S1<-TukeyANOVA2$Species
+Table.S1<-TukeyANOVA.LD75$Species
 
 
 ####Algae analyses####  
-library(zoo)
-
 #read in algae data from GitHub
 algae.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/Algae.csv")
 algae<-read.csv(text=algae.URL)
 
-#pull out only crayfish treatments and order factors
-algae.subset<-algae[algae$Species%in%c("Limosus", "Propinquus","Rusticus ","Virilis "),]
-algae.subset$Species<- factor(algae.subset$Species, levels=c("Limosus","Rusticus ", "Propinquus", "Virilis "))
+#read in tile data
+tile.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/Tile.csv")
+tile<-read.csv(text=tile.URL)
 
-#reduce spatial heterogenity and take rolling mean across 3 days 
-algae.subset.roll<-ddply(.data=algae.subset, .variables=.(Trophic, Species, Replicate,Origin), .fun= transform, Mean = rollmean(Density, 3, fill=NA, align="center"))
-algae.subset.roll<-algae.subset.roll[algae.subset.roll$Day%in%c("3","9","15","19","21","27","33","39","45","51","57"),]
+#merge two data frames
+algae<-merge(algae, tile, by=c("Species", "Replicate", "Day", "Trophic"))
 
-#pool data across Replicates 
-algae.subset.roll.mean<-ddply(.data=algae.subset.roll, .variables=.(Trophic, Species, Day,Origin), .fun= summarise, Mean = mean(Mean))
-
-library(mgcv)
-
-mod.1<-gam(Mean~ s(Day)+Trophic*Origin, data=algae.subset.roll)
-mod.2<-gam(Mean~ s(Day)+Trophic+Origin, data=algae.subset.roll) 
-mod.3<-gam(Mean~ s(Day)+Trophic, data=algae.subset.roll) 
-mod.4<-gam(Mean~ s(Day)+Origin, data=algae.subset.roll) 
-mod.5<-gam(Mean~ s(Day), data=algae.subset.roll) 
-
-require(bbmle)
-AIC<-AICctab(mod.1,mod.2,mod.3,mod.4,mod.5, base=T) #rank models 
-
-require(qpcR)
-#get weights 
-akaike.weights(AIC$AICc)
+#final-initial pecentange function 
+difffunc<-function(x){
+  y<- ((x$Density[which(x$Day == max(x$Day))]-x$Density[which(x$Day == min(x$Day))])/x$Density[which(x$Day == min(x$Day))])*100
+  return(y)
+}
 
 
-#plot Figure 3a
-Figure.3a<-ggplot(algae.subset.roll.mean, aes(x=Day,y=Mean, colour= Trophic))+geom_point()+facet_wrap(Species~Guild)+
-  stat_smooth(se=F, size=1, method="loess")+
-  scale_colour_manual(values=c("black", "grey"))+
-  scale_y_log10(breaks=c(20,100,500))+
-  ylab("Periphyton density (ug/ml)")+
-  theme_minimal()
+#calculate mean percent difference for each species x tile x replicate
+algae.diff<-ddply(algae, .variables=.(Species, Trophic, Replicate, Tile), .fun= difffunc)
 
-#plot Figure 3b
-library(gamm4)
-algae.subset.roll$Day <- as.numeric(algae.subset.roll$Day)
-algae.subset.roll$Day <- algae.subset.roll$Day + rnorm(341,0,0.1)
-mod.5<-gamm4(Mean~ s(Day)+Trophic, data=algae.subset.roll,REML=F)
-vis.gam(mod.5$gam, view=c("Day","Trophic"), color = "topo", theta=140, phi=10, ticktype="detailed")
+#rename V1
+colnames(algae.diff)[5]<-"per.diff"
 
-####Stable isotope analyses####
-#read in stable isotope data from GitHub
-SIA.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/SIA.csv")
-SIA<-read.csv(text=SIA.URL)
+#get range information
+algae.diff.day<-ddply(algae, .variables=.(Species, Trophic, Replicate, Tile), .fun=summarize, max.day=max(Day), min.day=min(Day))
+algae.diff$max.day<-algae.diff.day$max.day
+algae.diff$min.day<-algae.diff.day$min.day
 
-#pull out only crayfish treatments and order factors
-SIA$Species<- factor(SIA$Species, levels=c(" Limosus","Rusticus", "Propinquus", "Virilis"))
+#add range
+algae.diff<-ddply(algae.diff, .(), .fun= transform, range = max.day-min.day)
 
-#pool across Replicate and calulate Mean, SD
-SIA.mean<-ddply(.data=SIA, .variables=.(Species,Trophic), .fun= summarise, MeanC = mean(d15C), MeanN=mean(d15N))
-SIA.SD<-ddply(.data=SIA, .variables=.(Species, Trophic), .fun= summarise, SDC = sd(d15C), SDN = sd(d15N))
-SIA.DF<-merge(SIA.mean,SIA.SD)
+#remove inf
+algae.diff <- algae.diff[!algae.diff$per.diff %in% c("Inf"), ]
 
-#plot stable isotopes 
-Istotope.Plot<-ggplot(SIA.DF, aes(x =MeanC, y = MeanN, colour=Trophic))+geom_point(aes(shape = Species, size=3))+
-  geom_errorbar(aes(ymin=MeanN-SDN, ymax=MeanN+SDN))+
-  geom_errorbarh(aes(xmax = MeanC + SDC, xmin = MeanC - SDC))+
-  theme_minimal()+
-  scale_colour_manual(values = c("black", "grey"))+
-  scale_shape_manual(values=c(0,15,2,17))+
-  ylab(expression(paste(Delta, "N")))+
-  xlab(expression(paste(Delta, "C")))
 
-#run two-way ANOVA and TukeyHSD to determine differences between Species 
-ANOVA3<- aov(d15C ~ Origin*Trophic, data=SIA)
-TukeyHSD(ANOVA3)
+#divide by range to standardize sampling time 
+algae.diff<-ddply(algae.diff, .variables=.(Species, Trophic, Replicate, Tile), .fun=transform, std.per.diff=per.diff/range)
 
-ANOVA4<- aov(d15N ~ Origin*Trophic, data=SIA)
-summary(ANOVA4)
-TukeyHSD(ANOVA4)
+#subset crayfish
+algae.diff.cray<-algae.diff[algae.diff$Species %in% c("Rusticus","Limosus","Virilis","Propinquus","Snail"),]
+
+algae.diff.cray.mean<-ddply(algae.diff.cray, .variables=.(Species, Trophic, Replicate), .fun=summarise, mean.per.diff=mean(std.per.diff))
+
+#order factors
+algae.diff.cray.mean$Species<- factor(algae.diff.cray.mean$Species, levels=c("Limosus","Rusticus", "Propinquus", "Virilis", "Snail"))
+
+#run ANOVA for snail and crayfish
+ANOVA.algae<-aov(mean.per.diff~Species*Trophic, algae.diff.cray.mean)
+summary(ANOVA.algae)
+
+TukeyANOVA.algae<-TukeyHSD(ANOVA.algae)
+
+
+#plot Figure 2B
+Figure.2B<-ggplot(algae.diff.cray.mean, aes(x = Species, y = mean.per.diff))+
+  geom_boxplot(aes(colour = Trophic))+
+  theme_classic()+
+  theme(panel.border=element_rect(colour="black",fill=NA))+
+  theme(strip.background = element_blank())+
+  xlab("Species")+
+  ylab("Standardized percentage algae density change")+
+  scale_color_manual(values=c("Black", "Dark Grey", "Red"))
+
+#make Figure 2
+Figure2<-plot_grid(Figure.2A, Figure.2B, labels = c("A", "B"), ncol = 1)
+
 
 ####CV analyses####
 
+#subset crayfish
+algae.cray<-algae[algae$Species %in% c("Rusticus","Limosus","Virilis","Propinquus", "Snail"),]
+
 #calculate CV for each Species, Guild, Origin, Replicate
-algae.cv<-ddply(.data=algae.subset.roll, .variables=.(Species, Trophic, Replicate, Origin), .fun= summarise, CV = sd(Mean)/mean(Mean))
+algae.cray.cv.tile<-ddply(algae.cray, .variables=.(Species, Trophic, Replicate, Tile ), .fun= summarise, CV = sd(Density)/mean(Density))
 
-#pool across Replicates 
-algae.cv.mean<-ddply(.data=algae.cv, .variables=.(Species,Trophic, Origin), .fun= summarise, Mean = mean(CV), SE=sd(CV)/sqrt(length(CV)))
+#calculate CV for each replicate
+algae.cray.cv.rep<-ddply(algae.cray.cv.tile, .variables=.(Species, Trophic, Replicate), .fun= summarise, mean = mean(CV))
 
-#plot Figure 4
-Figure.4<-ggplot(algae.cv.mean, aes(x =Species, y = Mean, fill=Trophic))+geom_bar(stat = "identity",position="dodge")+xlab("Species")+ylab("Coefficent of variation (CV)")+
-  theme_minimal()+scale_fill_manual(values=c("black", "grey"))+
-  geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))+
-  scale_y_continuous(limits=c(0, 1.5))+
-  facet_wrap(~Origin, scales="free")
+#order factors
+algae.cray.cv.rep$Species<- factor(algae.cray.cv.rep$Species, levels=c("Limosus","Rusticus", "Propinquus", "Virilis", "Snail"))
+
+
+#plot Figure 3
+Figure.3<-ggplot(algae.cray.cv.rep, aes(x =Species, y = mean))+
+  geom_boxplot(aes(colour = Trophic))+
+  theme_classic()+
+  theme(panel.border=element_rect(colour="black",fill=NA))+
+  theme(strip.background = element_blank())+
+  xlab("Species")+
+  ylab("Coefficent of variation (CV)")+
+  scale_color_manual(values=c("Black", "Dark Grey", "Red"))+
+  scale_y_continuous(limits=c(0, 1.5))
 
 #run two-way ANOVA and TukeyHSD to determine differences between Origin, Trophic and Species  
-ANOVA5<- aov(CV ~ Trophic*Origin, data=algae.cv)
+ANOVA.CV<- aov(mean ~ Trophic*Species, data=algae.cray.cv.rep)
+summary(ANOVA.CV)
 
-ANOVA6<- aov(CV ~ Trophic*Species, data=algae.cv)
-TukeyHSD(ANOVA6)
+TukeyANOVA.CV<-TukeyHSD(ANOVA.CV)
+
 
 #Table S2
 Table.S2<-TukeyANOVA6$Species
 
-####Crayfish lengths
-length.URL <- getURL("https://raw.githubusercontent.com/Monsauce/Origin-omnivory-and-stability/master/Lengths.csv")
-length<-read.csv(text=length.URL)
-
-length$Species<- factor(length$Species, levels=c("Limosus","Rusticus ", "Propinquus", "Virilis "))#order factors
-
-length.mean<-ddply(.data=length, .variables=.(Trophic, Species), .fun= summarise, Mean = mean(Length), SE=sd(Length)/sqrt(length(Length)))
-
-#plot Figure S2
-Figure.S2<-ggplot(length.mean, aes(x = Species, y = Mean, fill=Trophic))+ geom_bar(stat = "identity",position="dodge")+xlab("Species")+
-  ylab("Length")+theme_minimal()+
-  scale_fill_manual(values=c("black", "grey"))+
-  geom_errorbar(aes(ymin=Mean-SE, ymax=Mean+SE),width=.2,position=position_dodge(.9))
-
-#run one-way ANOVA and TukeyHSD to determine differences between Species  
-ANOVA7 <- aov(Length ~ Species, data=length)
-TukeyHSD(ANOVA7)
 
 
 
