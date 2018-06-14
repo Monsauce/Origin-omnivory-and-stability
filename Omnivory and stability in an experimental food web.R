@@ -27,14 +27,36 @@ snail.subset.mean<-ddply(.data=snail.subset, .variables=.(Day, Trophic, Species,
 #pool across replicates and day 
 snail.subset.mean.day<-ddply(.data=snail.subset, .variables=.(Trophic, Species, Origin, Replicate), .fun= summarise, Mean = mean(Density))
 
-#plot Figure S1 
-Figure.S1<-ggplot(snail.subset.mean, aes(x = Day, y = Mean))+
+#remove snail for figure
+snail.subset.mean.crayfish<-snail.subset.mean[snail.subset.mean$Species%in%c("Limosus", "Propinquus","Rusticus","Virilis"),]
+
+#order factors
+snail.subset.mean.crayfish$Species<- factor(snail.subset.mean.crayfish$Species, levels=c("Limosus","Rusticus", "Propinquus", "Virilis"))
+
+#snail-only for figure
+snail.subset.mean.snail<-snail.subset.mean[snail.subset.mean$Species%in%c("Snail"),]
+
+#plot Figure S1A
+Figure.S1A<-ggplot(snail.subset.mean.crayfish, aes(x = Day, y = Mean))+
   geom_point()+
+  ylab("Mean number of snails remaining")+
   facet_grid(Trophic~Species)+
   stat_smooth(se=F, colour="black", size=1)+
   theme_classic()+
   theme(panel.border=element_rect(colour="black",fill=NA))+
   theme(strip.background = element_blank())
+  
+#plot Figure S1B
+Figure.S1B<-ggplot(snail.subset.mean.snail, aes(x = Day, y = Mean))+
+    geom_point()+
+    ylab("Mean number of snails remaining")+
+    stat_smooth(se=F, colour="black", size=1)+
+    theme_classic()+
+    theme(panel.border=element_rect(colour="black",fill=NA))+
+    theme(strip.background = element_blank())
+    
+#merge plots together
+FigureS1<-plot_grid(Figure.S1A, Figure.S1B, labels = c("A", "B"), ncol = 1)
 
 
 #calculate LD75 for each species and treatment 
@@ -169,8 +191,8 @@ Figure.2A<-ggplot(LD75.model.output, aes(x = Species, y =LD75))+
   theme_classic()+theme(panel.border=element_rect(colour="black",fill=NA))+
   theme(strip.background = element_blank())
 
-#run two-way ANOVA and TukeyHSD to determine differences between Species
-ANOVA.LD75<-aov(LD75~Species*Trophic, data=LD75.model.output)
+#run two-way ANOVA and TukeyHSD to determine differences between Species and food web modules
+ANOVA.LD75<-aov(LD75~Trophic*Species, data=LD75.model.output)
 TukeyANOVA.LD75<-TukeyHSD(ANOVA.LD75)
 
 #Table S1
@@ -225,11 +247,12 @@ algae.diff.cray.mean<-ddply(algae.diff.cray, .variables=.(Species, Trophic, Repl
 #order factors
 algae.diff.cray.mean$Species<- factor(algae.diff.cray.mean$Species, levels=c("Limosus","Rusticus", "Propinquus", "Virilis", "Snail"))
 
-#run ANOVA for snail and crayfish
-ANOVA.algae<-aov(mean.per.diff~Species*Trophic, algae.diff.cray.mean)
-summary(ANOVA.algae)
-
+#run ANOVA for snail and crayfish TukeyHSD to determine differences between Species and food web modules
+ANOVA.algae<-aov(mean.per.diff~Trophic*Species, algae.diff.cray.mean)
 TukeyANOVA.algae<-TukeyHSD(ANOVA.algae)
+
+#Table S2
+Table.S2<-TukeyANOVA.algae$Species
 
 
 #plot Figure 2B
@@ -272,15 +295,12 @@ Figure.3<-ggplot(algae.cray.cv.rep, aes(x =Species, y = mean))+
   scale_color_manual(values=c("Black", "Dark Grey", "Red"))+
   scale_y_continuous(limits=c(0, 1.5))
 
-#run two-way ANOVA and TukeyHSD to determine differences between Origin, Trophic and Species  
+#run two-way ANOVA and TukeyHSD to determine differences between Species and food web module  
 ANOVA.CV<- aov(mean ~ Trophic*Species, data=algae.cray.cv.rep)
-summary(ANOVA.CV)
-
 TukeyANOVA.CV<-TukeyHSD(ANOVA.CV)
 
-
-#Table S2
-Table.S2<-TukeyANOVA6$Species
+#Table S3
+Table.S3<-TukeyANOVA.CV$Species
 
 
 
